@@ -12,5 +12,11 @@
 	],
 	"objects": [
 		"stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump", "shamrock", "shark", "shell", "ship", "shoe", "shout"
-	]
+	],
+	"objectMap": {
+		"k": ["cake", "candy", "car", "cow", "cup", "cut", "key", "kick", "kiss", "cat", "fork"],
+		"sh": ["shamrock", "shark", "shell", "ship", "shoe", "shout", "fish"],
+		"st": ["stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump"],
+		"p": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"]
+	}
 }
