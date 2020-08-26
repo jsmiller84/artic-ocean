@@ -1,7 +1,7 @@
 {
-	"name": "Test",
+	"name": "Border",
 	"plugin-id": "Sprite",
-	"sid": 998929863290515,
+	"sid": 741596873787611,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1024,
+						"height": 1024,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6972146,
+						"imageSpriteId": 95542,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 197048946215723,
-				"name": "Animation 1",
+				"sid": 924918499374548,
+				"name": "static",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

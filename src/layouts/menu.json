@@ -133,35 +133,6 @@
 						"angle": 6.19591884457987,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "Test",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 32,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1870,
-						"y": 1858,
-						"width": 1226,
-						"height": 76.11325043431208,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 10
-					}
 				}
 			],
 			"sid": 641137644936300,

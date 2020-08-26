@@ -32,15 +32,7 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "menu__select_sounds(runtime.objects.ToggleButton.getAllInstances());"
-				},
-				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 355385295410848,
-					"parameters": {
-						"layout": "\"Main\""
-					}
+					"script": "menu__select_sounds(runtime.objects.Toggle.getAllInstances());"
 				}
 			],
 			"sid": 132388939264577
@@ -171,80 +163,6 @@
 					"sid": 494948319277911
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-touch-speed",
-					"objectClass": "Touch",
-					"sid": 465582614050988,
-					"parameters": {
-						"touch-index": "0",
-						"comparison": 4,
-						"speed": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "VerticalScroll",
-					"sid": 208023650892774,
-					"parameters": {
-						"y": "VerticalScroll.Y + 1"
-					}
-				}
-			],
-			"sid": 708318454816413
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "Test",
-					"sid": 215174658601492,
-					"parameters": {
-						"object": "ItemText"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "ItemText",
-					"sid": 827499811298470,
-					"parameters": {
-						"opacity": "50"
-					}
-				}
-			],
-			"sid": 624776494634106
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "Test2",
-					"sid": 135801312505365,
-					"parameters": {
-						"object": "ItemText"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "ItemText",
-					"sid": 132931834935495,
-					"parameters": {
-						"opacity": "0"
-					}
-				}
-			],
-			"sid": 191168950496884
 		}
 	],
 	"sid": 801155953161655

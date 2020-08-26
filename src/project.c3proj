@@ -3,7 +3,7 @@
 	"savedWithRelease": 21002,
 	"name": "Bubbles",
 	"runtime": "c3",
-	"useWorker": "dom",
+	"useWorker": "worker",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
@@ -99,9 +99,8 @@
 	"objectTypes": {
 		"items": [
 			"LoadingText",
-			"Test",
-			"Test2",
-			"Text"
+			"Text",
+			"Border"
 		],
 		"subfolders": [
 			{
@@ -323,6 +322,16 @@
 					"name": "FredokaOne-Regular.ttf",
 					"type": "application/font-sfnt",
 					"sid": 826053340373874
+				},
+				{
+					"name": "sofiapro-light.ttf",
+					"type": "application/font-sfnt",
+					"sid": 875694828412718
+				},
+				{
+					"name": "sofiapro-bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 216481709724405
 				}
 			],
 			"subfolders": []

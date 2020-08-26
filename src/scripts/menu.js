@@ -102,7 +102,7 @@
 
       //if the top level soundObject has placement, create the placement text that can be clicked on to enable.
       if ('placement' in soundObject) {
-        let localX = currX + 480;
+        let localX = currX + 380;
 
         for (let plNdx = 0; plNdx < soundObject.placement.length; ++plNdx) {
           const placementObject = await createText(soundObject.placement[plNdx], localX, currY + 25, 45, 225);
@@ -119,7 +119,7 @@
             soundPlacementUIDMap[soundObject.sound] = [];
           }
           soundPlacementUIDMap[soundObject.sound].push(placementObject.uid);
-          localX += 285;
+          localX += 270;
         }
       }
 
@@ -130,11 +130,12 @@
 
           const blendSoundObject = soundObject.blends[bNdx];
 
-          const blendGameObject = await createText(blendSoundObject.sound, currX + 280, currY + 10, 50, 135);
-          const blendToggleGameObject = await createToggle(blendSoundObject, currX + 235, currY + 55, 50, 50);
+          const blendToggleGameObject = await createToggle(blendSoundObject, currX + 185, currY + 55, 50, 50);
+		  const blendGameObject = await createText(blendSoundObject.sound, currX + 230, currY + 10, 50, 135);
+
 
           if ('placement' in blendSoundObject) {
-            let localX = currX + 480;
+            let localX = currX + 380;
 
             for (let plNdx = 0; plNdx < blendSoundObject.placement.length; ++plNdx) {
               const placementObject = await createText(blendSoundObject.placement[plNdx], localX, currY + 10, 45, 225);
@@ -151,7 +152,7 @@
               }
               soundPlacementUIDMap[blendSoundObject.sound].push(placementObject.uid);
 
-              localX += 285;
+              localX += 270;
             }
           }
           currY += 70;
@@ -163,10 +164,10 @@
   async function createText(text, x, y, size, width) {
     const soundObject = await __runtime.objects.ItemText.createInstance(0, x, y);
     soundObject.text = text.toUpperCase();
-    soundObject.fontFace = 'FredokaOne-Regular';
+    soundObject.fontFace = 'sofiapro-bold';
     soundObject.sizePt = size;
     soundObject.width = width;
-    soundObject.height = 80;
+    soundObject.height = 100;
 	
 	await __runtime.callFunction("pinToVerticalScroll", soundObject.uid);
 
@@ -186,11 +187,15 @@
 
     toggleButtons.forEach((button) => {
       if (button.animationFrame === 1) {
-        selectedSounds.push(button.instVars.refSound);
+        selectedSounds.push(button.instVars.sound);
         //console.log(button.instVars.refSound);
       }
     });
+	console.log("here");
+	console.log(selectedSounds);
     globalThis.main__loadSounds = selectedSounds;
+	
+	__runtime.goToLayout("Main");
   }
   
   globalThis.menu__toggle_pageUp = async() => {
