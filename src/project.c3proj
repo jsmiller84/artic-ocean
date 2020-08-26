@@ -1,9 +1,9 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 20400,
+	"savedWithRelease": 21002,
 	"name": "Bubbles",
 	"runtime": "c3",
-	"useWorker": "worker",
+	"useWorker": "dom",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "AJAX",
 			"name": "AJAX",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Arr",
 			"name": "Array",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,7 @@
 			"id": "Persist",
 			"name": "Persist",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -83,7 +83,7 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		},
 		{
@@ -91,7 +91,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r204",
+			"version": "r210.2",
 			"bundled": false
 		}
 	],
@@ -499,7 +499,8 @@
 		"loaderStyle": "splash",
 		"preloadSounds": false,
 		"clearBackground": true,
-		"enhancedAccelerationPrecision": true
+		"enhancedAccelerationPrecision": true,
+		"cordovaiOSScheme": "file"
 	},
 	"viewportWidth": 3840,
 	"viewportHeight": 2160,
