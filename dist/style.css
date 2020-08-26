@@ -42,3 +42,13 @@ html, body, canvas {
 	src: url('fonts/fredokaone-regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'sofiapro-light';
+	src: url('fonts/sofiapro-light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'sofiapro-bold';
+	src: url('fonts/sofiapro-bold.ttf') format('truetype');
+}
+

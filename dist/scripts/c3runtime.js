@@ -8627,11 +8627,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.Text.Cnds.IsBoolInstanceVarSet,
 		C3.ScriptsInEvents.Menu_Event5_Act1,
 		C3.Plugins.System.Cnds.PickAll,
-		C3.Plugins.Text.Cnds.PickByUID,
-		C3.Plugins.Touch.Cnds.CompareTouchSpeed,
-		C3.Plugins.Sprite.Acts.SetY,
-		C3.Plugins.Sprite.Cnds.IsOverlapping,
-		C3.Plugins.Text.Acts.SetOpacity
+		C3.Plugins.Text.Cnds.PickByUID
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -8714,9 +8710,8 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{PageDown: 0},
 		{VerticalScroll: 0},
 		{LoadingText: 0},
-		{Test: 0},
-		{Test2: 0},
 		{Text: 0},
+		{Sprite: 0},
 		{objectFamily: 0},
 		{initialized: 0},
 		{objectTouched: 0},
@@ -8930,12 +8925,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 			return () => n0.ExpObject(v1.GetValue(), 1);
 		},
 		() => 0.5,
-		() => "Main",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 1);
-		},
-		() => 50
+		() => "Main"
 	];
 }
 
@@ -8962,7 +8952,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 
 		async Menu_Event2_Act1(runtime, localVars)
 		{
-			menu__select_sounds(runtime.objects.ToggleButton.getAllInstances());
+			menu__select_sounds(runtime.objects.Toggle.getAllInstances());
 		},
 
 		async Menu_Event3_Act1(runtime, localVars)
@@ -9282,7 +9272,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 
       //if the top level soundObject has placement, create the placement text that can be clicked on to enable.
       if ('placement' in soundObject) {
-        let localX = currX + 480;
+        let localX = currX + 380;
 
         for (let plNdx = 0; plNdx < soundObject.placement.length; ++plNdx) {
           const placementObject = await createText(soundObject.placement[plNdx], localX, currY + 25, 45, 225);
@@ -9299,7 +9289,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
             soundPlacementUIDMap[soundObject.sound] = [];
           }
           soundPlacementUIDMap[soundObject.sound].push(placementObject.uid);
-          localX += 285;
+          localX += 270;
         }
       }
 
@@ -9310,11 +9300,12 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 
           const blendSoundObject = soundObject.blends[bNdx];
 
-          const blendGameObject = await createText(blendSoundObject.sound, currX + 280, currY + 10, 50, 135);
-          const blendToggleGameObject = await createToggle(blendSoundObject, currX + 235, currY + 55, 50, 50);
+          const blendToggleGameObject = await createToggle(blendSoundObject, currX + 185, currY + 55, 50, 50);
+		  const blendGameObject = await createText(blendSoundObject.sound, currX + 230, currY + 10, 50, 135);
+
 
           if ('placement' in blendSoundObject) {
-            let localX = currX + 480;
+            let localX = currX + 380;
 
             for (let plNdx = 0; plNdx < blendSoundObject.placement.length; ++plNdx) {
               const placementObject = await createText(blendSoundObject.placement[plNdx], localX, currY + 10, 45, 225);
@@ -9331,7 +9322,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
               }
               soundPlacementUIDMap[blendSoundObject.sound].push(placementObject.uid);
 
-              localX += 285;
+              localX += 270;
             }
           }
           currY += 70;
@@ -9343,10 +9334,10 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
   async function createText(text, x, y, size, width) {
     const soundObject = await __runtime.objects.ItemText.createInstance(0, x, y);
     soundObject.text = text.toUpperCase();
-    soundObject.fontFace = 'FredokaOne-Regular';
+    soundObject.fontFace = 'sofiapro-bold';
     soundObject.sizePt = size;
     soundObject.width = width;
-    soundObject.height = 80;
+    soundObject.height = 100;
 	
 	await __runtime.callFunction("pinToVerticalScroll", soundObject.uid);
 
@@ -9366,11 +9357,15 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 
     toggleButtons.forEach((button) => {
       if (button.animationFrame === 1) {
-        selectedSounds.push(button.instVars.refSound);
+        selectedSounds.push(button.instVars.sound);
         //console.log(button.instVars.refSound);
       }
     });
+	console.log("here");
+	console.log(selectedSounds);
     globalThis.main__loadSounds = selectedSounds;
+	
+	__runtime.goToLayout("Main");
   }
   
   globalThis.menu__toggle_pageUp = async() => {
