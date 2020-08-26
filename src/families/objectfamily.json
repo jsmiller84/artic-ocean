@@ -1,0 +1,83 @@
+{
+	"name": "objectFamily",
+	"plugin-id": "Sprite",
+	"sid": 250817597319653,
+	"instanceVariables": [
+		{
+			"name": "SelectionArray",
+			"type": "number",
+			"desc": "",
+			"sid": 895021582733581
+		},
+		{
+			"name": "name",
+			"type": "string",
+			"desc": "",
+			"sid": 696390037183496
+		},
+		{
+			"name": "clickable",
+			"type": "boolean",
+			"desc": "",
+			"sid": 408325410016508
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 160032759378547
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 163817046386621
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 110630814023949
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 423800969382575
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"money",
+		"cat",
+		"fish",
+		"frog",
+		"fork",
+		"lemon",
+		"star",
+		"snail",
+		"swan",
+		"stick",
+		"stamp",
+		"stingray",
+		"strawberry",
+		"stump",
+		"storm",
+		"stork",
+		"stool",
+		"stop",
+		"shout",
+		"ship",
+		"shoe",
+		"shell",
+		"shark",
+		"shamrock",
+		"candy",
+		"cake",
+		"car",
+		"cow",
+		"cut",
+		"cup",
+		"key",
+		"kick",
+		"kiss"
+	]
+}

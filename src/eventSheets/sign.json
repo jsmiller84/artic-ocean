@@ -1,0 +1,303 @@
+{
+	"name": "Sign",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "objectsLeft",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 611268581608399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 914260331656998
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 336827099475377,
+					"parameters": {
+						"tag": "\"loadPositionData\"",
+						"file": "GuessPositions.json"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SignText",
+					"sid": 990715821843942,
+					"parameters": {
+						"text": "objectTouched"
+					}
+				},
+				{
+					"id": "set-font-size",
+					"objectClass": "SignText",
+					"sid": 648280096504366,
+					"parameters": {
+						"size-pt": "200"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 715218537476446,
+					"parameters": {
+						"variable": "objectsLeft",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 746895412180552,
+					"parameters": {
+						"variable": "objectCreated",
+						"value": "0"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "leftCoral",
+					"sid": 816773867584080
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "rightCoral",
+					"sid": 669440108413871
+				}
+			],
+			"sid": 184389655555359
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 318908785433102,
+					"parameters": {
+						"tag": "\"loadPositionData\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "GuessPositionArray",
+					"sid": 170086852628634,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 912817417322340,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 423467915822027,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "GuessPositionArray.Width-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 896256152061338,
+							"parameters": {
+								"object-name": "objectTouched",
+								"layer": "0",
+								"x": "0",
+								"y": "0"
+							}
+						}
+					],
+					"sid": 889520273162999
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "objectCreated",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 882431923444762
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "objectFamily",
+					"sid": 953871048294257
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "objectFamily",
+					"sid": 733066485981519,
+					"parameters": {
+						"width": "550",
+						"height": "550"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "objectFamily",
+					"sid": 550137740945973,
+					"behaviorType": "Physics",
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "objectFamily",
+					"sid": 611921280754738,
+					"parameters": {
+						"angle": "-5"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "objectFamily",
+					"sid": 199499582282824,
+					"parameters": {
+						"x": "GuessPositionArray.At(objectCreated)",
+						"y": "GuessPositionArray.At(objectCreated, 1)"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 765925474080381,
+					"parameters": {
+						"variable": "objectCreated",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 482412593878097
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 100746707725877,
+					"parameters": {
+						"object": "objectFamily"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 685187750783921,
+					"parameters": {
+						"object-to-create": "coin",
+						"layer": "0",
+						"x": "objectFamily.X",
+						"y": "objectFamily.Y"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 148989852486197
+				},
+				{
+					"id": "destroy",
+					"objectClass": "objectFamily",
+					"sid": 751890085929802
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "coin",
+					"sid": 479314806253969,
+					"parameters": {
+						"angle": "-5"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "coin",
+					"sid": 974688143867917,
+					"parameters": {
+						"width": "550",
+						"height": "550"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 779960352622637,
+					"parameters": {
+						"variable": "objectsLeft",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 698103347371630,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 962566253754298,
+							"parameters": {
+								"first-value": "objectsLeft",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 549081801274433,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 887433360325114,
+							"parameters": {
+								"layout": "\"Main\""
+							}
+						}
+					],
+					"sid": 959017601846962
+				}
+			]
+		}
+	],
+	"sid": 314133100036910
+}

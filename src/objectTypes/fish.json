@@ -1,0 +1,49 @@
+{
+	"name": "fish",
+	"plugin-id": "Sprite",
+	"sid": 328352605152289,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\fish.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 61,
+						"collisionPoly": {
+							"points": [
+								0.9426666666666671,
+								0.1693333333333333,
+								0.9346666666666665,
+								0.600666666666667,
+								0.132,
+								0.6146666666666665,
+								0.10600000000000008,
+								0.20799999999999982
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 229856926703958,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

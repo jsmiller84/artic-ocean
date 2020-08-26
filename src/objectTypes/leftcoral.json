@@ -1,0 +1,43 @@
+{
+	"name": "leftCoral",
+	"plugin-id": "Sprite",
+	"sid": 932185087873901,
+	"isGlobal": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 312508194959355
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 3840,
+						"height": 2160,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\background\\pink-coral1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 47,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 359058112430983,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"name": "money",
+	"plugin-id": "Sprite",
+	"sid": 553716977485522,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\cash.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 65,
+						"collisionPoly": {
+							"points": [
+								0.06933333333333334,
+								0.2706666666666666,
+								0.9053333333333335,
+								0.2813333333333333,
+								0.930666666666666,
+								0.7239999999999998,
+								0.7653333333333328,
+								0.8383333333333334,
+								0.068,
+								0.8579999999999999
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 488941055510735,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

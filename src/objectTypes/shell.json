@@ -1,0 +1,59 @@
+{
+	"name": "shell",
+	"plugin-id": "Sprite",
+	"sid": 240916796605001,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 380,
+						"height": 380,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\sh\\shell.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6417064,
+						"collisionPoly": {
+							"points": [
+								0.16052631578947366,
+								0.1013157894736842,
+								0.49342105263157887,
+								0.025000000000000026,
+								0.7638157894736838,
+								0.0828947368421053,
+								0.9131578947368418,
+								0.2013157894736843,
+								0.9723684210526314,
+								0.613157894736842,
+								0.6697368421052635,
+								0.9473684210526321,
+								0.3526315789473684,
+								0.9684210526315788,
+								0.0671052631578947,
+								0.6421052631578951,
+								0.02631578947368423,
+								0.4710526315789473
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 358994866647111,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

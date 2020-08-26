@@ -1,0 +1,1109 @@
+{
+	"name": "Main",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "initialized",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 546784584633308
+		},
+		{
+			"eventType": "variable",
+			"name": "objectTouched",
+			"type": "string",
+			"initialValue": "\"\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 652021994961506
+		},
+		{
+			"eventType": "variable",
+			"name": "xVelocityIncrement",
+			"type": "number",
+			"initialValue": "200",
+			"comment": "",
+			"isStatic": true,
+			"isConstant": false,
+			"sid": 332672031723645
+		},
+		{
+			"eventType": "variable",
+			"name": "yVelocityIncrement",
+			"type": "number",
+			"initialValue": "200",
+			"comment": "",
+			"isStatic": true,
+			"isConstant": false,
+			"sid": 167123556070258
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Scene Initialization",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 736499690309301
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "main__init();"
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "rightCoral",
+							"sid": 137899873904981
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "leftCoral",
+							"sid": 475753686942221
+						}
+					],
+					"sid": 888542181065575
+				},
+				{
+					"functionName": "initCrabPosition",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "crabsheet",
+							"sid": 888466978452443,
+							"parameters": {
+								"x": "crab.X",
+								"y": "crab.Y - 30"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "crabsheet",
+							"sid": 444289374203188,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "crab",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "crabsheet",
+							"sid": 366418566354415,
+							"parameters": {
+								"where": "in-front",
+								"object": "crab"
+							}
+						},
+						{
+							"id": "setplaybackspeedratio1",
+							"objectClass": "crabsheet",
+							"sid": 298071169523217,
+							"parameters": {
+								"speed_ratio0": "2"
+							}
+						}
+					],
+					"sid": 225505619792206
+				},
+				{
+					"functionName": "setupBubblePhysics",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "bubbleUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 505064873778943
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 416912618631702,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Bubble",
+									"sid": 553800024087007,
+									"parameters": {
+										"unique-id": "bubbleUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Bubble",
+									"sid": 501992349326047,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "enabled"
+									}
+								},
+								{
+									"id": "set-world-gravity",
+									"objectClass": "Bubble",
+									"sid": 850667957291775,
+									"behaviorType": "Physics",
+									"parameters": {
+										"gravity": "0"
+									}
+								},
+								{
+									"id": "set-density",
+									"objectClass": "Bubble",
+									"sid": 930551960489143,
+									"behaviorType": "Physics",
+									"parameters": {
+										"density": "1.0"
+									}
+								},
+								{
+									"id": "set-elasticity",
+									"objectClass": "Bubble",
+									"sid": 459345504087676,
+									"behaviorType": "Physics",
+									"parameters": {
+										"elasticity": "1"
+									}
+								},
+								{
+									"id": "set-friction",
+									"objectClass": "Bubble",
+									"sid": 179483216084109,
+									"behaviorType": "Physics",
+									"parameters": {
+										"friction": "0"
+									}
+								},
+								{
+									"id": "set-velocity",
+									"objectClass": "Bubble",
+									"sid": 670647897543105,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "choose(-xVelocityIncrement, xVelocityIncrement)",
+										"y-component": "choose(-yVelocityIncrement, yVelocityIncrement)"
+									}
+								},
+								{
+									"id": "set-prevent-rotation",
+									"objectClass": "Bubble",
+									"sid": 938893103126359,
+									"behaviorType": "Physics",
+									"parameters": {
+										"setting": "prevent-rotations"
+									}
+								}
+							],
+							"sid": 719116938089394
+						}
+					]
+				},
+				{
+					"functionName": "attachObject",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "objectUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 286908680570469
+						},
+						{
+							"name": "bubbleUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 614166751111123
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 193829065060219,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Bubble",
+									"sid": 115953000375668,
+									"parameters": {
+										"unique-id": "bubbleUID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 636814588525058,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "objectFamily",
+											"sid": 573101303403343,
+											"parameters": {
+												"unique-id": "objectUID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "pin-to-object",
+											"objectClass": "objectFamily",
+											"sid": 709064332619651,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "Bubble",
+												"mode": "position-angle"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Bubble",
+											"sid": 697906322778112,
+											"parameters": {
+												"instance-variable": "childObject",
+												"value": "objectFamily.name"
+											}
+										}
+									],
+									"sid": 932320453409154
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 701083662163969
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Crab Movement",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 171162371064343
+								}
+							],
+							"actions": [
+								{
+									"id": "setobjectxflip11",
+									"objectClass": "crabsheet",
+									"sid": 559534805625317,
+									"parameters": {
+										"mirror_x_axis2": "don't mirror x axis"
+									}
+								}
+							],
+							"sid": 136009536397084,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "crab",
+											"sid": 597289040801950,
+											"parameters": {
+												"instance-variable": "pause",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "crab",
+											"sid": 702044741626671,
+											"parameters": {
+												"instance-variable": "pause",
+												"value": "crab.pause - 1*dt"
+											}
+										}
+									],
+									"sid": 665626066464701
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "crab",
+											"sid": 643869810455907,
+											"parameters": {
+												"instance-variable": "pause",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "crab",
+											"sid": 146289093733576,
+											"parameters": {
+												"x": "crab.vx * dt + crab.X",
+												"y": "1980"
+											}
+										},
+										{
+											"id": "resumeanimation6",
+											"objectClass": "crabsheet",
+											"sid": 798097793379326
+										}
+									],
+									"sid": 216102748643752
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "crabsheet",
+											"sid": 641783228061319,
+											"parameters": {
+												"instance-variable": "mirror"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "setobjectxflip11",
+											"objectClass": "crabsheet",
+											"sid": 493903412100565,
+											"parameters": {
+												"mirror_x_axis2": "mirror x axis"
+											}
+										}
+									],
+									"sid": 544669144955456
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "crab",
+											"sid": 522728408484416,
+											"parameters": {
+												"object": "crabWallRight"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "crab",
+											"sid": 531009619604630,
+											"parameters": {
+												"instance-variable": "vx",
+												"value": "-crab.vx"
+											}
+										},
+										{
+											"id": "toggle-boolean-instvar",
+											"objectClass": "crabsheet",
+											"sid": 468746309208897,
+											"parameters": {
+												"instance-variable": "mirror"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "crab",
+											"sid": 965512034467659,
+											"parameters": {
+												"instance-variable": "pause",
+												"value": "int(random(1, 10))"
+											}
+										},
+										{
+											"id": "pauseanimation5",
+											"objectClass": "crabsheet",
+											"sid": 250984709044749
+										}
+									],
+									"sid": 175286953494210
+								}
+							]
+						}
+					],
+					"sid": 727758340686106
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Bubble Movement",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-velocity",
+									"objectClass": "Bubble",
+									"sid": 274564368295272,
+									"behaviorType": "Physics",
+									"parameters": {
+										"which": "x-velocity",
+										"comparison": 2,
+										"value": "-xVelocityIncrement"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-velocity",
+									"objectClass": "Bubble",
+									"sid": 805453553362970,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "-xVelocityIncrement",
+										"y-component": "Bubble.Physics.VelocityY"
+									}
+								}
+							],
+							"sid": 151895230419436
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-velocity",
+									"objectClass": "Bubble",
+									"sid": 662043826115584,
+									"behaviorType": "Physics",
+									"parameters": {
+										"which": "x-velocity",
+										"comparison": 4,
+										"value": "xVelocityIncrement"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-velocity",
+									"objectClass": "Bubble",
+									"sid": 618841784489261,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "xVelocityIncrement",
+										"y-component": "Bubble.Physics.VelocityY"
+									}
+								}
+							],
+							"sid": 132424487788102
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-velocity",
+									"objectClass": "Bubble",
+									"sid": 717474598749456,
+									"behaviorType": "Physics",
+									"parameters": {
+										"which": "y-velocity",
+										"comparison": 2,
+										"value": "-yVelocityIncrement"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-velocity",
+									"objectClass": "Bubble",
+									"sid": 750390015517152,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "Bubble.Physics.VelocityX",
+										"y-component": "-yVelocityIncrement"
+									}
+								}
+							],
+							"sid": 633996811900874
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-velocity",
+									"objectClass": "Bubble",
+									"sid": 671277173142378,
+									"behaviorType": "Physics",
+									"parameters": {
+										"which": "y-velocity",
+										"comparison": 4,
+										"value": "yVelocityIncrement"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-velocity",
+									"objectClass": "Bubble",
+									"sid": 694954012363197,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "Bubble.Physics.VelocityX",
+										"y-component": "yVelocityIncrement"
+									}
+								}
+							],
+							"sid": 660966379106910
+						}
+					],
+					"sid": 736470206061541
+				}
+			],
+			"sid": 574822826892066
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "User Interaction",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 488411709351387,
+							"parameters": {
+								"object": "Bubble"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "main__bubble_tapped(runtime.objects.Bubble.getFirstPickedInstance());"
+						}
+					],
+					"sid": 660368173437445
+				},
+				{
+					"functionName": "popBubble",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "bubbleUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 707736344267607
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "setanimationloop3",
+							"objectClass": "bubblepopspritesheet",
+							"sid": 154800401755268,
+							"parameters": {
+								"loop_animation?2": "play once"
+							}
+						}
+					],
+					"sid": 802540710039604,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Bubble",
+									"sid": 167771686797895,
+									"parameters": {
+										"unique-id": "bubbleUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 747411530769010,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "bubblepopspritesheet",
+									"sid": 312076212122408,
+									"parameters": {
+										"object": "Bubble",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Bubble",
+									"sid": 392726781813898,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "disabled"
+									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Bubble",
+									"sid": 939253459752317,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Bubble",
+									"sid": 913230321527530
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 255943580298242,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "bubblepopspritesheet",
+									"sid": 139755375090320
+								}
+							],
+							"sid": 351383849682667
+						}
+					]
+				},
+				{
+					"functionName": "dropObject",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "objectName",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 455887120417849
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 356833474756846,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "objectFamily",
+									"sid": 786347619440775,
+									"parameters": {
+										"instance-variable": "name",
+										"comparison": 0,
+										"value": "objectName"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "unpin",
+									"objectClass": "objectFamily",
+									"sid": 367695298170980,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "objectFamily",
+									"sid": 719758030268527,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "enabled"
+									}
+								},
+								{
+									"id": "set-velocity",
+									"objectClass": "objectFamily",
+									"sid": 770088680095102,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "0",
+										"y-component": "300"
+									}
+								},
+								{
+									"id": "enabledisable-collisions",
+									"objectClass": "objectFamily",
+									"sid": 827953110157560,
+									"behaviorType": "Physics",
+									"parameters": {
+										"object": "borderBoundary",
+										"state": "disable"
+									}
+								},
+								{
+									"id": "enabledisable-collisions",
+									"objectClass": "objectFamily",
+									"sid": 735048327572393,
+									"behaviorType": "Physics",
+									"parameters": {
+										"object": "objectFamily",
+										"state": "disable"
+									}
+								},
+								{
+									"id": "enabledisable-collisions",
+									"objectClass": "objectFamily",
+									"sid": 917217714451362,
+									"behaviorType": "Physics",
+									"parameters": {
+										"object": "Bubble",
+										"state": "disable"
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "objectFamily",
+									"sid": 901597403245091
+								}
+							],
+							"sid": 954653144636877
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 874876037472999,
+							"parameters": {
+								"object": "objectFamily"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "objectFamily",
+							"sid": 567792108445558,
+							"parameters": {
+								"instance-variable": "clickable"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "main__object_tapped()"
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 440692256745380,
+							"parameters": {
+								"variable": "objectTouched",
+								"value": "objectFamily.name"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 445898661550259,
+							"parameters": {
+								"layout": "\"Sign\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "objectFamily",
+							"sid": 426109494407089
+						}
+					],
+					"sid": 990789575905927
+				}
+			],
+			"sid": 303686645168349
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collision",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "objectFamily",
+							"sid": 971354004583329,
+							"parameters": {
+								"object": "floorBottom"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "objectFamily",
+							"sid": 865021290969161,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "disabled"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "objectFamily",
+							"sid": 983113143616464,
+							"parameters": {
+								"x": "crab.X + 220",
+								"y": "crab.Y - 210"
+							}
+						},
+						{
+							"id": "pin-to-object",
+							"objectClass": "objectFamily",
+							"sid": 197178412010601,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "crab",
+								"mode": "position-angle"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "objectFamily",
+							"sid": 317524187417599,
+							"parameters": {
+								"instance-variable": "clickable",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 184547148442741
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bubble",
+							"sid": 119680375831607,
+							"parameters": {
+								"object": "borderBoundary"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "borderBoundary",
+							"sid": 529741825887083,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"bottom\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "Bubble",
+							"sid": 249681108941279,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "0",
+								"implulse-y": "-5",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 554151780439510
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bubble",
+							"sid": 301313632023942,
+							"parameters": {
+								"object": "borderBoundary"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "borderBoundary",
+							"sid": 169788155264189,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"top\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "Bubble",
+							"sid": 499139592447825,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "0",
+								"implulse-y": "5",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 899849651006316
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bubble",
+							"sid": 131675409002645,
+							"parameters": {
+								"object": "borderBoundary"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "borderBoundary",
+							"sid": 266188512494505,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "Bubble",
+							"sid": 863394460657093,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "5",
+								"implulse-y": "0",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 126490234810956
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bubble",
+							"sid": 934383951706545,
+							"parameters": {
+								"object": "borderBoundary"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "borderBoundary",
+							"sid": 793780361402112,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "Bubble",
+							"sid": 210046315400330,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "-5",
+								"implulse-y": "0",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 438609500858571
+				}
+			],
+			"sid": 517872637331627
+		}
+	],
+	"sid": 925493614756591
+}

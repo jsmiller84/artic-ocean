@@ -1,0 +1,57 @@
+{
+	"name": "coin",
+	"plugin-id": "Sprite",
+	"sid": 856715737952690,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 900,
+						"height": 900,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\coin\\coin.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 51,
+						"collisionPoly": {
+							"points": [
+								0.19666666666666666,
+								0.19666666666666666,
+								0.5,
+								0.09444444444444444,
+								0.7811111111111111,
+								0.21833333333333327,
+								0.8883333333333333,
+								0.5,
+								0.765,
+								0.765,
+								0.5,
+								0.8711111111111111,
+								0.2105555555555556,
+								0.7888888888888889,
+								0.07444444444444442,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 365897249862867,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

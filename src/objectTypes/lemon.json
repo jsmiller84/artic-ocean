@@ -1,0 +1,51 @@
+{
+	"name": "lemon",
+	"plugin-id": "Sprite",
+	"sid": 390357605472767,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\lemon.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 64,
+						"collisionPoly": {
+							"points": [
+								0.0513333333333334,
+								0.17000000000000012,
+								0.9126666666666665,
+								0.2199999999999999,
+								0.8166666666666671,
+								0.7626666666666665,
+								0.4273333333333333,
+								0.788,
+								0.04600000000000003,
+								0.48500000000000015
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 438294999538600,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

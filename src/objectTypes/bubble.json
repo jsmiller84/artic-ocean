@@ -1,0 +1,108 @@
+{
+	"name": "Bubble",
+	"plugin-id": "Sprite",
+	"sid": 304047972038938,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "childObject",
+			"type": "string",
+			"desc": "",
+			"sid": 856325035404901
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 285532772377069
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 239418592333019
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 543892184563206
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1000,
+						"height": 1000,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\bubble\\bubble.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 50,
+						"collisionPoly": {
+							"points": [
+								0.2057142857142857,
+								0.19238095238095235,
+								0.34523809523809523,
+								0.10738095238095233,
+								0.5,
+								0.08714285714285715,
+								0.6690476190476184,
+								0.12619047619047613,
+								0.7847619047619048,
+								0.21476190476190476,
+								0.8740476190476184,
+								0.3459523809523809,
+								0.9061904761904762,
+								0.5,
+								0.8695238095238089,
+								0.6626190476190473,
+								0.790952380952381,
+								0.790952380952381,
+								0.6588095238095236,
+								0.8790476190476187,
+								0.4980952380952381,
+								0.9138095238095238,
+								0.334047619047619,
+								0.8754761904761901,
+								0.2119047619047619,
+								0.7876190476190477,
+								0.11238095238095235,
+								0.6533333333333329,
+								0.06999999999999998,
+								0.4771428571428571,
+								0.12071428571428566,
+								0.32142857142857134
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 2700,
+						"height": 2700,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\jsmil\\Pictures\\speech\\bubble\\bubble-pop.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 11,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 138276711782006,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

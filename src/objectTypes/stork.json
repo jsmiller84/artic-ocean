@@ -1,0 +1,55 @@
+{
+	"name": "stork",
+	"plugin-id": "Sprite",
+	"sid": 672779172290071,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\st\\stork.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 320,
+						"collisionPoly": {
+							"points": [
+								0.17166666666666666,
+								0.12833333333333335,
+								0.2800000000000003,
+								0.09666666666666662,
+								0.8633333333333332,
+								0.02166666666666668,
+								0.9666666666666668,
+								0.4466666666666672,
+								0.9833333333333334,
+								0.7983333333333349,
+								0.41166666666666657,
+								0.515,
+								0.028333333333333335,
+								0.5066666666666668
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 927604325561493,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

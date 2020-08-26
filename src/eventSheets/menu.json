@@ -1,0 +1,251 @@
+{
+	"name": "Menu",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "touchAngle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 589215615986835
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 747372987495650
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 877378000958226,
+					"parameters": {
+						"object": "StartGameText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "menu__select_sounds(runtime.objects.ToggleButton.getAllInstances());"
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 355385295410848,
+					"parameters": {
+						"layout": "\"Main\""
+					}
+				}
+			],
+			"sid": 132388939264577
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 419505082293091
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "menu__init();"
+				}
+			],
+			"sid": 578759931432696
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 668299148814011,
+					"parameters": {
+						"object": "Toggle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "menu__toggle_button(runtime.objects.Toggle.getFirstPickedInstance());"
+				}
+			],
+			"sid": 458453719838119
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 347361690140879,
+					"parameters": {
+						"object": "ItemText"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "ItemText",
+					"sid": 584920365675083,
+					"parameters": {
+						"instance-variable": "canToggle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "menu__toggle_placement(runtime.objects.ItemText.getFirstPickedInstance());"
+				}
+			],
+			"sid": 597686223964359
+		},
+		{
+			"functionName": "pinToVerticalScroll",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "uid",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 484363438687797
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-all",
+					"objectClass": "System",
+					"sid": 212922618022442,
+					"parameters": {
+						"object": "VerticalScroll"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 220060904138721,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "ItemText",
+							"sid": 911550754785379,
+							"parameters": {
+								"unique-id": "uid"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "ItemText",
+							"sid": 802627115126062,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "VerticalScroll",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 494948319277911
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-touch-speed",
+					"objectClass": "Touch",
+					"sid": 465582614050988,
+					"parameters": {
+						"touch-index": "0",
+						"comparison": 4,
+						"speed": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "VerticalScroll",
+					"sid": 208023650892774,
+					"parameters": {
+						"y": "VerticalScroll.Y + 1"
+					}
+				}
+			],
+			"sid": 708318454816413
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Test",
+					"sid": 215174658601492,
+					"parameters": {
+						"object": "ItemText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "ItemText",
+					"sid": 827499811298470,
+					"parameters": {
+						"opacity": "50"
+					}
+				}
+			],
+			"sid": 624776494634106
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Test2",
+					"sid": 135801312505365,
+					"parameters": {
+						"object": "ItemText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "ItemText",
+					"sid": 132931834935495,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 191168950496884
+		}
+	],
+	"sid": 801155953161655
+}

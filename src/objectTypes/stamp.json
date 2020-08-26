@@ -1,0 +1,49 @@
+{
+	"name": "stamp",
+	"plugin-id": "Sprite",
+	"sid": 397777274593595,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\st\\stamp.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6668520,
+						"collisionPoly": {
+							"points": [
+								0.09000000000000001,
+								0.06833333333333338,
+								0.8766666666666668,
+								0.05666666666666677,
+								0.901666666666667,
+								0.905,
+								0.10333333333333336,
+								0.9083333333333335
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 753405238863238,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

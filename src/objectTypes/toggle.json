@@ -1,0 +1,68 @@
+{
+	"name": "Toggle",
+	"plugin-id": "Sprite",
+	"sid": 746278290402136,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "sound",
+			"type": "string",
+			"desc": "",
+			"sid": 981586955624021
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\speech\\bubbles\\resources\\src\\gem\\gem-off.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4248175,
+						"useCollisionPoly": true,
+						"duration": 0
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\speech\\bubbles\\resources\\src\\gem\\gem-on.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4260046,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0
+					}
+				],
+				"sid": 937054644339280,
+				"name": "toggle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "strawberry",
+	"plugin-id": "Sprite",
+	"sid": 418809976637012,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\st\\strawberry.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5099776,
+						"collisionPoly": {
+							"points": [
+								0.10833333333333339,
+								0.3916666666666667,
+								0.34333333333333327,
+								0.11500000000000005,
+								0.6066666666666657,
+								0.10166666666666663,
+								0.8366666666666668,
+								0.3716666666666667,
+								0.7633333333333335,
+								0.6716666666666663,
+								0.5533333333333328,
+								0.8416666666666669,
+								0.25499999999999995,
+								0.9183333333333338,
+								0.12833333333333324,
+								0.8499999999999996
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 771354068666155,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

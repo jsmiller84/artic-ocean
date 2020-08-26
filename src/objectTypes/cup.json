@@ -1,0 +1,57 @@
+{
+	"name": "cup",
+	"plugin-id": "Sprite",
+	"sid": 281194637212685,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\k\\cup.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6478241,
+						"collisionPoly": {
+							"points": [
+								0.2950000000000001,
+								0.04833333333333343,
+								0.591666666666667,
+								0.03333333333333334,
+								0.8683333333333333,
+								0.11333333333333334,
+								0.8433333333333335,
+								0.5,
+								0.7883333333333333,
+								0.8750000000000004,
+								0.5,
+								0.9300000000000002,
+								0.20833333333333337,
+								0.8900000000000003,
+								0.08500000000000006,
+								0.12166666666666673
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 907007817226228,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

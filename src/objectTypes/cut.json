@@ -1,0 +1,57 @@
+{
+	"name": "cut",
+	"plugin-id": "Sprite",
+	"sid": 241055398979578,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\k\\cut.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7813425,
+						"collisionPoly": {
+							"points": [
+								0.02666666666666667,
+								0.18499999999999994,
+								0.5683333333333338,
+								0.030000000000000016,
+								0.956666666666667,
+								0.06500000000000004,
+								0.9950000000000004,
+								0.49833333333333335,
+								0.6966666666666664,
+								0.8366666666666664,
+								0.2766666666666665,
+								0.9750000000000002,
+								0.19333333333333333,
+								0.951666666666667,
+								0,
+								0.4716666666666669
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 945404079135736,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

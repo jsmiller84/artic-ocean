@@ -1,0 +1,57 @@
+{
+	"name": "swan",
+	"plugin-id": "Sprite",
+	"sid": 487475474680017,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\swan.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 68,
+						"collisionPoly": {
+							"points": [
+								0.7039999999999994,
+								0.16733333333333317,
+								0.9273333333333331,
+								0.20266666666666672,
+								0.9700000000000003,
+								0.3999999999999999,
+								0.7953333333333336,
+								0.9179999999999996,
+								0.1933333333333331,
+								0.9360000000000004,
+								0.014666666666666666,
+								0.7046666666666662,
+								0.04066666666666668,
+								0.41466666666666674,
+								0.5896666666666663,
+								0.43833333333333335
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 661838743062418,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

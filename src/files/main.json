@@ -1,0 +1,22 @@
+{
+	"initialBubblePositions": [
+		[500, 500],
+		[1000, 800],
+		[1500, 500],
+		[2000, 800],
+		[2500, 500],
+		[3000, 800]
+	],
+	"original_objects": [
+		"money", "cat", "fish", "fork", "frog", "lemon", "snail", "star", "swan"
+	],
+	"objects": [
+		"stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump", "shamrock", "shark", "shell", "ship", "shoe", "shout"
+	],
+	"objectMap": {
+		"k": ["cake", "candy", "car", "cow", "cup", "cut", "key", "kick", "kiss", "cat", "fork"],
+		"sh": ["shamrock", "shark", "shell", "ship", "shoe", "shout", "fish"],
+		"st": ["stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump"],
+		"p": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"]
+	}
+}

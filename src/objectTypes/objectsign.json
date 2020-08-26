@@ -1,0 +1,57 @@
+{
+	"name": "objectSign",
+	"plugin-id": "Sprite",
+	"sid": 145207154039653,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 2500,
+						"height": 1636,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\test\\sign.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 54,
+						"collisionPoly": {
+							"points": [
+								0.15189528224706844,
+								0.23208333333333334,
+								0.5,
+								0.05708333333333333,
+								0.8933733296973002,
+								0.1625,
+								0.9211889828197437,
+								0.5,
+								0.8636487592037088,
+								0.7916666666666666,
+								0.5,
+								0.9995833333333334,
+								0.08071993455140442,
+								0.87625,
+								0.041178074720479955,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 692591549195336,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

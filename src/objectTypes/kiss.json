@@ -1,0 +1,59 @@
+{
+	"name": "kiss",
+	"plugin-id": "Sprite",
+	"sid": 794736454751959,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\k\\kiss.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8037213,
+						"collisionPoly": {
+							"points": [
+								0.17833333333333334,
+								0.058333333333333265,
+								0.5983333333333333,
+								0.005,
+								0.9916666666666665,
+								0.2983333333333331,
+								1,
+								0.7216666666666676,
+								0.7699999999999997,
+								0.9333333333333337,
+								0.49833333333333335,
+								0.991666666666667,
+								0.18333333333333346,
+								0.9249999999999999,
+								0,
+								0.7200000000000003,
+								0.005,
+								0.3658333333333326
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 988033382822452,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

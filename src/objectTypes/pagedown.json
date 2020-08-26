@@ -1,0 +1,57 @@
+{
+	"name": "PageDown",
+	"plugin-id": "Sprite",
+	"sid": 177911468982936,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 232,
+						"height": 264,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\speech\\bubbles\\resources\\src\\gem\\subgem-off.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8477886,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								1,
+								0,
+								1,
+								0.49242424242424243,
+								1,
+								0.9981060606060606,
+								0.5,
+								0.9962121212121212,
+								0,
+								1,
+								0,
+								0.5643939393939397
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 411126382868784,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

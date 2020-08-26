@@ -1,0 +1,34 @@
+{
+	"name": "ItemText",
+	"plugin-id": "Text",
+	"sid": 399164375078933,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "sound",
+			"type": "string",
+			"desc": "",
+			"sid": 543856579673062
+		},
+		{
+			"name": "placement",
+			"type": "string",
+			"desc": "",
+			"sid": 919148515213744
+		},
+		{
+			"name": "canToggle",
+			"type": "boolean",
+			"desc": "",
+			"sid": 640784271930307
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 788033135912207
+		}
+	],
+	"effectTypes": []
+}

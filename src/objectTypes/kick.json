@@ -1,0 +1,63 @@
+{
+	"name": "kick",
+	"plugin-id": "Sprite",
+	"sid": 240013335346907,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\k\\kick.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3734899,
+						"collisionPoly": {
+							"points": [
+								0.1433333333333333,
+								0.06416666666666661,
+								0.3575000000000003,
+								0.09583333333333333,
+								0.4291666666666668,
+								0.2650000000000001,
+								0.49291666666666667,
+								0.5125000000000003,
+								0.8872916666666667,
+								0.2504166666666668,
+								0.9644791666666669,
+								0.34645833333333315,
+								0.9991666666666666,
+								0.47833333333333344,
+								0.6633333333333334,
+								0.9316666666666666,
+								0.5041666666666662,
+								0.9725000000000003,
+								0,
+								0.395,
+								0,
+								0.180833333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 281087247093019,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

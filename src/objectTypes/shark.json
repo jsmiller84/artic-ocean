@@ -1,0 +1,57 @@
+{
+	"name": "shark",
+	"plugin-id": "Sprite",
+	"sid": 193886247037180,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 380,
+						"height": 380,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\sh\\shark.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8844611,
+						"collisionPoly": {
+							"points": [
+								0.2421052631578947,
+								0.37105263157894747,
+								0.4907894736842105,
+								0.1118421052631579,
+								0.7355263157894741,
+								0.3723684210526317,
+								1,
+								0.8434210526315783,
+								0.9618421052631567,
+								0.8618421052631571,
+								0.49473684210526314,
+								0.814473684210526,
+								0,
+								0.8763157894736842,
+								0.006578947368421052,
+								0.8263157894736834
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 825917586506210,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"name": "snail",
+	"plugin-id": "Sprite",
+	"sid": 330736717938234,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\snail.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 66,
+						"collisionPoly": {
+							"points": [
+								0.4206666666666667,
+								0.05866666666666661,
+								0.9533333333333334,
+								0.2719999999999999,
+								0.9213333333333333,
+								0.5893333333333337,
+								0.6993333333333331,
+								0.6756666666666667,
+								0.03599999999999996,
+								0.6606666666666663,
+								0.02133333333333333,
+								0.5466666666666663,
+								0.18500000000000003,
+								0.20399999999999985
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 595360218898200,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

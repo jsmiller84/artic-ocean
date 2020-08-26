@@ -1,0 +1,507 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 20400,
+	"name": "Bubbles",
+	"runtime": "c3",
+	"useWorker": "worker",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spriter",
+			"name": "Scml",
+			"author": "BrashMonkey",
+			"version": "3-8-2020",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persist",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r204",
+			"bundled": false
+		}
+	],
+	"uniqueId": "i621ntkgzj5",
+	"objectTypes": {
+		"items": [
+			"LoadingText",
+			"Test",
+			"Test2",
+			"Text"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"money",
+							"frog",
+							"lemon",
+							"snail",
+							"swan"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"shamrock",
+									"shark",
+									"shell",
+									"ship",
+									"shoe",
+									"shout",
+									"fish"
+								],
+								"subfolders": [],
+								"name": "sh"
+							},
+							{
+								"items": [
+									"stamp",
+									"star",
+									"stick",
+									"stingray",
+									"stool",
+									"stop",
+									"stork",
+									"storm",
+									"strawberry",
+									"stump"
+								],
+								"subfolders": [],
+								"name": "st"
+							},
+							{
+								"items": [
+									"cake",
+									"candy",
+									"car",
+									"cow",
+									"cup",
+									"cut",
+									"key",
+									"kick",
+									"kiss",
+									"cat",
+									"fork"
+								],
+								"subfolders": [],
+								"name": "k"
+							}
+						],
+						"name": "Objects"
+					},
+					{
+						"items": [
+							"AJAX",
+							"Mouse",
+							"Touch"
+						],
+						"subfolders": [],
+						"name": "System"
+					},
+					{
+						"items": [
+							"mainBackground",
+							"rightCoral",
+							"leftCoral"
+						],
+						"subfolders": [],
+						"name": "Background"
+					}
+				],
+				"name": "Common"
+			},
+			{
+				"items": [
+					"ObjectSpawnArray",
+					"BubblePositions"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"crab",
+							"crabsheet"
+						],
+						"subfolders": [],
+						"name": "Crab"
+					},
+					{
+						"items": [
+							"borderBoundary",
+							"floorBottom",
+							"crabWallRight"
+						],
+						"subfolders": [],
+						"name": "Boundary"
+					},
+					{
+						"items": [
+							"Bubble",
+							"bubblepopspritesheet"
+						],
+						"subfolders": [],
+						"name": "Bubble"
+					},
+					{
+						"items": [
+							"chestclosed"
+						],
+						"subfolders": [],
+						"name": "Chest"
+					}
+				],
+				"name": "Main"
+			},
+			{
+				"items": [
+					"coin",
+					"objectSign",
+					"SignText",
+					"GuessPositionArray"
+				],
+				"subfolders": [],
+				"name": "Sign"
+			},
+			{
+				"items": [
+					"ItemText",
+					"MenuBackground",
+					"Scroll",
+					"StartGameText",
+					"Toggle",
+					"SubToggle",
+					"PageUp",
+					"PageDown",
+					"VerticalScroll"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [
+		{
+			"members": [
+				"leftCoral",
+				"mainBackground",
+				"rightCoral"
+			],
+			"selectMode": "normal"
+		}
+	],
+	"families": {
+		"items": [
+			"objectFamily"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Main",
+			"Start",
+			"Sign",
+			"Menu"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Main",
+			"Start",
+			"Sign",
+			"Menu"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [
+				{
+					"name": "Main.js",
+					"type": "application/javascript",
+					"sid": 375075712887125
+				},
+				{
+					"name": "Menu.js",
+					"type": "application/javascript",
+					"sid": 535432860860697
+				}
+			],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "FredokaOne-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 826053340373874
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 620192609296478,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 447115822768701,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 720732617015088,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 998362168994456,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 619984905810587,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 569753473614570,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 432752583062336,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "crab.scon",
+					"type": "application/json",
+					"sid": 492196168106380
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "BubblePositions.json",
+							"type": "application/json",
+							"sid": 961411626744278
+						},
+						{
+							"name": "ObjectSpawns.json",
+							"type": "application/json",
+							"sid": 276974878510823
+						},
+						{
+							"name": "GuessPositions.json",
+							"type": "application/json",
+							"sid": 389980940869257
+						},
+						{
+							"name": "Main.json",
+							"type": "application/json",
+							"sid": 778366003804138
+						},
+						{
+							"name": "Menu.json",
+							"type": "application/json",
+							"sid": 259794665628498
+						}
+					],
+					"subfolders": [],
+					"name": "json"
+				},
+				{
+					"items": [
+						{
+							"name": "bubble-pop-spritesheet.scon",
+							"type": "application/json",
+							"sid": 297614981029771
+						},
+						{
+							"name": "crabsheet.scon",
+							"type": "application/json",
+							"sid": 804578625037301
+						}
+					],
+					"subfolders": [],
+					"name": "spriter"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useHighDpi": true,
+		"orientations": "landscape",
+		"enableWebGL": true,
+		"gpuPreference": "default",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": false,
+		"clearBackground": true,
+		"enhancedAccelerationPrecision": true
+	},
+	"viewportWidth": 3840,
+	"viewportHeight": 2160,
+	"firstLayout": "Start"
+}

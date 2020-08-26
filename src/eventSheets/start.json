@@ -1,0 +1,27 @@
+{
+	"name": "Start",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-loader-layout-complete",
+					"objectClass": "System",
+					"sid": 478423129162770
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 863122319043662,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 717197757163847
+		}
+	],
+	"sid": 704268539335715
+}

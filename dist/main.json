@@ -1,0 +1,16 @@
+{
+	"initialBubblePositions": [
+		[500, 500],
+		[1000, 800],
+		[1500, 500],
+		[2000, 800],
+		[2500, 500],
+		[3000, 800]
+	],
+	"original_objects": [
+		"money", "cat", "fish", "fork", "frog", "lemon", "snail", "star", "swan"
+	],
+	"objects": [
+		"stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump", "shamrock", "shark", "shell", "ship", "shoe", "shout"
+	]
+}

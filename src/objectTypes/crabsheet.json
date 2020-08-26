@@ -1,0 +1,50 @@
+{
+	"name": "crabsheet",
+	"plugin-id": "Spriter",
+	"sid": 743409877124562,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "mirror",
+			"type": "boolean",
+			"desc": "",
+			"sid": 788011526504979
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 167555967932375
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 606,
+						"height": 606,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6895501,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 779234597149150,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,93 @@
+{
+	"name": "chestclosed",
+	"plugin-id": "Sprite",
+	"sid": 246703362657582,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 866489821407626
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1200,
+						"height": 1200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\chest\\chest-closed.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 722819,
+						"collisionPoly": {
+							"points": [
+								0.16722222222222222,
+								0.2188888888888888,
+								0.8561111111111112,
+								0.22277777777777769,
+								0.85611111111111,
+								0.43833333333333335,
+								0.8005555555555556,
+								0.7705555555555553,
+								0.1944444444444445,
+								0.771111111111111,
+								0.13555555555555557,
+								0.48833333333333345
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0
+					},
+					{
+						"width": 1200,
+						"height": 1200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\chest\\chest-open.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2332116,
+						"collisionPoly": {
+							"points": [
+								0.13416666666666657,
+								0.16083333333333327,
+								0.28874999999999995,
+								0.09291666666666668,
+								0.48333333333333317,
+								0.06333333333333334,
+								0.8275000000000005,
+								0.10833333333333318,
+								0.8758333333333334,
+								0.4283333333333336,
+								0.7933333333333334,
+								0.7600000000000001,
+								0.5266666666666667,
+								0.7733333333333338,
+								0.20749999999999985,
+								0.7700000000000002,
+								0.14583333333333326,
+								0.49833333333333335
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0
+					}
+				],
+				"sid": 390354462803950,
+				"name": "chest-closed",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

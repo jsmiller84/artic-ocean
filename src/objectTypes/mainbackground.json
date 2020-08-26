@@ -1,0 +1,63 @@
+{
+	"name": "mainBackground",
+	"plugin-id": "Sprite",
+	"sid": 145038388213907,
+	"isGlobal": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 479023997875938
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 3840,
+						"height": 2160,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\background\\main.png",
+						"exportFormat": "png",
+						"exportQuality": 1,
+						"imageSpriteId": 48,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9997395833333333,
+								0,
+								0.9997395833333333,
+								0.5,
+								0.9997395833333333,
+								0.999537037037037,
+								0.5,
+								0.999537037037037,
+								0,
+								0.999537037037037,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 200177907843757,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

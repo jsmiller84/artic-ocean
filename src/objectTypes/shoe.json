@@ -1,0 +1,53 @@
+{
+	"name": "shoe",
+	"plugin-id": "Sprite",
+	"sid": 385246244424302,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 380,
+						"height": 380,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\sh\\shoe.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9952360,
+						"collisionPoly": {
+							"points": [
+								0.4736842105263157,
+								0.37105263157894725,
+								0.5736842105263157,
+								0.40526315789473677,
+								0.7355263157894736,
+								0.5,
+								0.7394736842105266,
+								0.6276315789473679,
+								0.24868421052631573,
+								0.6144736842105263,
+								0.2710526315789473,
+								0.38552631578947355
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 643622824832364,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

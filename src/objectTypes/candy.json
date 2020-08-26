@@ -1,0 +1,55 @@
+{
+	"name": "candy",
+	"plugin-id": "Sprite",
+	"sid": 557760260483286,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\objects\\k\\candy.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5817909,
+						"collisionPoly": {
+							"points": [
+								0.23500000000000004,
+								0.11000000000000017,
+								0.681666666666667,
+								0.005000000000000011,
+								0.9666666666666669,
+								0.4900000000000001,
+								0.896666666666667,
+								0.7833333333333329,
+								0.5516666666666663,
+								1,
+								0.35999999999999976,
+								0.9483333333333328,
+								0,
+								0.45666666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 167987976757450,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

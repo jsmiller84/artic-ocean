@@ -1,0 +1,61 @@
+{
+	"name": "stingray",
+	"plugin-id": "Sprite",
+	"sid": 449124201704547,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\st\\stingray.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5011225,
+						"collisionPoly": {
+							"points": [
+								0.16749999999999995,
+								0.2316666666666666,
+								0.34499999999999925,
+								0.3600000000000007,
+								0.8933333333333334,
+								0.04583333333333339,
+								0.8949999999999991,
+								0.18666666666666637,
+								0.6545833333333337,
+								0.41625000000000106,
+								0.8764583333333337,
+								0.5614583333333336,
+								0.7783333333333332,
+								0.7474999999999999,
+								0.5,
+								0.8216666666666668,
+								0.18749999999999992,
+								0.7833333333333335,
+								0.06333333333333324,
+								0.2700000000000003
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 383191638982595,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
