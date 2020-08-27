@@ -118,14 +118,29 @@
 							{
 								"items": [
 									"shamrock",
-									"shark",
-									"shell",
-									"ship",
-									"shoe",
 									"shout",
 									"fish"
 								],
-								"subfolders": [],
+								"subfolders": [
+									{
+										"items": [
+											"shadow",
+											"shake",
+											"shampoo",
+											"shapes",
+											"shark",
+											"sheep",
+											"shell",
+											"ship",
+											"shoe",
+											"shot",
+											"shovel",
+											"shower"
+										],
+										"subfolders": [],
+										"name": "initial"
+									}
+								],
 								"name": "sh"
 							},
 							{
@@ -145,21 +160,73 @@
 								"name": "st"
 							},
 							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"cake",
+											"candy",
+											"car",
+											"cat",
+											"cow",
+											"cup",
+											"cut",
+											"key",
+											"kiss"
+										],
+										"subfolders": [],
+										"name": "initial"
+									},
+									{
+										"items": [
+											"bike",
+											"book",
+											"duck",
+											"fork",
+											"hawk",
+											"kick",
+											"lick",
+											"milk",
+											"pink",
+											"rake",
+											"rock",
+											"sock"
+										],
+										"subfolders": [],
+										"name": "final"
+									}
+								],
+								"name": "k"
+							},
+							{
 								"items": [
-									"cake",
-									"candy",
-									"car",
-									"cow",
-									"cup",
-									"cut",
-									"key",
-									"kick",
-									"kiss",
-									"cat",
-									"fork"
+									"door",
+									"forest",
+									"four",
+									"horse",
+									"north",
+									"orange",
+									"popcorn",
+									"shorts",
+									"surfboard",
+									"tornado"
 								],
 								"subfolders": [],
-								"name": "k"
+								"name": "or"
+							},
+							{
+								"items": [
+									"art",
+									"bark",
+									"card",
+									"dark",
+									"garlic",
+									"heart",
+									"marble",
+									"sparkle"
+								],
+								"subfolders": [],
+								"name": "ar"
 							}
 						],
 						"name": "Objects"
@@ -408,16 +475,6 @@
 			"subfolders": [
 				{
 					"items": [
-						{
-							"name": "BubblePositions.json",
-							"type": "application/json",
-							"sid": 961411626744278
-						},
-						{
-							"name": "ObjectSpawns.json",
-							"type": "application/json",
-							"sid": 276974878510823
-						},
 						{
 							"name": "GuessPositions.json",
 							"type": "application/json",

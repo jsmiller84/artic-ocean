@@ -1,0 +1,57 @@
+{
+	"name": "sheep",
+	"plugin-id": "Sprite",
+	"sid": 952062472917988,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\sh\\sheep.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5844196,
+						"collisionPoly": {
+							"points": [
+								0.225,
+								0.225,
+								0.5,
+								0.18166666666666667,
+								0.9083333333333333,
+								0.09,
+								0.8966666666666666,
+								0.5,
+								0.89,
+								0.89,
+								0.5,
+								0.6566666666666666,
+								0.16166666666666665,
+								0.8366666666666667,
+								0.08166666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 964474825812721,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

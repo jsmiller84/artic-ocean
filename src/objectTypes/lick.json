@@ -1,0 +1,57 @@
+{
+	"name": "lick",
+	"plugin-id": "Sprite",
+	"sid": 588825267556533,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\k\\final\\lick.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7307509,
+						"collisionPoly": {
+							"points": [
+								0.14666666666666667,
+								0.14666666666666667,
+								0.5,
+								0.23666666666666666,
+								0.845,
+								0.15333333333333332,
+								0.9583333333333334,
+								0.5,
+								0.8783333333333333,
+								0.8783333333333333,
+								0.5,
+								0.9616666666666667,
+								0.12833333333333333,
+								0.87,
+								0.06333333333333334,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 191815208573631,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

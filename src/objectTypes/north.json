@@ -1,0 +1,57 @@
+{
+	"name": "north",
+	"plugin-id": "Sprite",
+	"sid": 273247108054325,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\or\\north.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8294387,
+						"collisionPoly": {
+							"points": [
+								0.08,
+								0.08,
+								0.5,
+								0.15666666666666668,
+								0.7666666666666667,
+								0.23166666666666666,
+								0.9183333333333333,
+								0.5,
+								0.8333333333333334,
+								0.8333333333333334,
+								0.5,
+								0.9616666666666667,
+								0.16833333333333333,
+								0.83,
+								0.08166666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 791705203446038,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

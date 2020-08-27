@@ -1,0 +1,57 @@
+{
+	"name": "horse",
+	"plugin-id": "Sprite",
+	"sid": 936740830316909,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\or\\horse.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1321100,
+						"collisionPoly": {
+							"points": [
+								0.21,
+								0.21,
+								0.5,
+								0.22833333333333333,
+								0.9583333333333334,
+								0.04,
+								0.79,
+								0.5,
+								0.8766666666666667,
+								0.8766666666666667,
+								0.5,
+								0.53,
+								0.15833333333333333,
+								0.84,
+								0.043333333333333335,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 220328392020606,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "sparkle",
+	"plugin-id": "Sprite",
+	"sid": 232385199858077,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\ar\\sparkle.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1944159,
+						"collisionPoly": {
+							"points": [
+								0.17666666666666667,
+								0.17666666666666667,
+								0.5,
+								0.06333333333333334,
+								0.8483333333333334,
+								0.15,
+								0.94,
+								0.5,
+								0.8666666666666667,
+								0.8666666666666667,
+								0.5,
+								0.8466666666666667,
+								0.16333333333333333,
+								0.835,
+								0.11666666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 777237615844362,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

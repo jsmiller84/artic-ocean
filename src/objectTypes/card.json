@@ -1,0 +1,57 @@
+{
+	"name": "card",
+	"plugin-id": "Sprite",
+	"sid": 169201922883663,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\ar\\card.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4084932,
+						"collisionPoly": {
+							"points": [
+								0.135,
+								0.135,
+								0.5,
+								0.065,
+								0.8133333333333334,
+								0.185,
+								0.8116666666666666,
+								0.5,
+								0.81,
+								0.81,
+								0.5,
+								0.9766666666666667,
+								0.135,
+								0.8633333333333333,
+								0.135,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 365353273132166,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

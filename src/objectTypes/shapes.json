@@ -1,0 +1,57 @@
+{
+	"name": "shapes",
+	"plugin-id": "Sprite",
+	"sid": 761957127433509,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\sh\\shapes.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1449335,
+						"collisionPoly": {
+							"points": [
+								0.15666666666666668,
+								0.15666666666666668,
+								0.5,
+								0.06166666666666667,
+								0.7366666666666667,
+								0.26166666666666666,
+								0.9066666666666666,
+								0.5,
+								0.8266666666666667,
+								0.8266666666666667,
+								0.5,
+								0.9416666666666667,
+								0.23166666666666666,
+								0.7666666666666667,
+								0.225,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 715716457365272,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

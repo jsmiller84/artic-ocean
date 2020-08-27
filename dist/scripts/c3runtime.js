@@ -8634,11 +8634,19 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{SelectionArray: 0},
 		{name: 0},
 		{clickable: 0},
-		{shamrock: 0},
+		{shadow: 0},
+		{shake: 0},
+		{shampoo: 0},
+		{shapes: 0},
 		{shark: 0},
+		{sheep: 0},
 		{shell: 0},
 		{ship: 0},
 		{shoe: 0},
+		{shot: 0},
+		{shovel: 0},
+		{shower: 0},
+		{shamrock: 0},
 		{shout: 0},
 		{fish: 0},
 		{stamp: 0},
@@ -8654,14 +8662,42 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{cake: 0},
 		{candy: 0},
 		{car: 0},
+		{cat: 0},
 		{cow: 0},
 		{cup: 0},
 		{cut: 0},
 		{key: 0},
-		{kick: 0},
 		{kiss: 0},
-		{cat: 0},
+		{bike: 0},
+		{book: 0},
+		{duck: 0},
 		{fork: 0},
+		{hawk: 0},
+		{kick: 0},
+		{lick: 0},
+		{milk: 0},
+		{pink: 0},
+		{rake: 0},
+		{rock: 0},
+		{sock: 0},
+		{door: 0},
+		{forest: 0},
+		{four: 0},
+		{horse: 0},
+		{north: 0},
+		{orange: 0},
+		{popcorn: 0},
+		{shorts: 0},
+		{surfboard: 0},
+		{tornado: 0},
+		{art: 0},
+		{bark: 0},
+		{card: 0},
+		{dark: 0},
+		{garlic: 0},
+		{heart: 0},
+		{marble: 0},
+		{sparkle: 0},
 		{money: 0},
 		{frog: 0},
 		{lemon: 0},
@@ -8711,7 +8747,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{VerticalScroll: 0},
 		{LoadingText: 0},
 		{Text: 0},
-		{Sprite: 0},
+		{Border: 0},
 		{objectFamily: 0},
 		{initialized: 0},
 		{objectTouched: 0},
@@ -9033,10 +9069,10 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 			const mainJsonURL = await __runtime.assets.getProjectFileUrl("Main.json");
 			const mainJsonResponse = await __runtime.assets.fetchJson(mainJsonURL);
 
-			let loadObjects = [];
-			globalThis.main__loadSounds.forEach((sound) => {
+			//let loadObjects = globalThis.main__loadSounds;
+			/*globalThis.main__loadSounds.forEach((sound) => {
 				loadObjects = loadObjects.concat(mainJsonResponse.objectMap[sound]);
-			})
+			})*/
 			
 
 			__runtime.objects.Bubble.getAllInstances().forEach((bubble) => {
@@ -9044,7 +9080,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 			});
 
 			const bubblePosArray = mainJsonResponse.initialBubblePositions;
-			objectsArray = loadObjects;
+			objectsArray = globalThis.main__loadSounds;
 
 			for(let ndx = 0; ndx < bubblePosArray.length; ++ndx) {
 				const x = bubblePosArray[ndx][0];
@@ -9215,7 +9251,9 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 
   //object containing all sound pages that will be displayed
   let soundPages = null;
-
+  
+  let objectMap = null;
+  
   let xTextStartPosition = 600;
   const yTextStartPosition = 200;
   //this is for toggle buttons to be able to toggle sounds on and off
@@ -9229,8 +9267,13 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
     if (!initialized) {
       const menuJsonURL = await __runtime.assets.getProjectFileUrl("Menu.json");
       const menuJsonResponse = await __runtime.assets.fetchJson(menuJsonURL);
+	  
+	  const mainJsonURL = await __runtime.assets.getProjectFileUrl("Main.json");
+	  const mainJsonResponse = await __runtime.assets.fetchJson(mainJsonURL);
 
       soundPages = menuJsonResponse.pages;
+	  objectMap = mainJsonResponse.objectMap;
+	  
       initialized = true;
     }
     await setPage(_pageNumber);
@@ -9338,9 +9381,6 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
     soundObject.sizePt = size;
     soundObject.width = width;
     soundObject.height = 100;
-	
-	await __runtime.callFunction("pinToVerticalScroll", soundObject.uid);
-
 
     return soundObject;
   }
@@ -9353,12 +9393,49 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
     return toggle;
   }
 
+  //
+  // This function is called before we move onto the main page
+  // This will iterate all of the toggle buttons ... which might not be correct
+  // in the future.
   globalThis.menu__select_sounds = async (toggleButtons) => {
-
+    
     toggleButtons.forEach((button) => {
+	  const sound = button.instVars.sound;
+	  
       if (button.animationFrame === 1) {
-        selectedSounds.push(button.instVars.sound);
-        //console.log(button.instVars.refSound);
+	    if(sound in soundPlacementUIDMap) {
+		  const placementObjects = soundPlacementUIDMap[sound];
+		  		  
+		  let soundsAdded = false;
+		  let placements = [];
+		  
+		  placementObjects.forEach((uid) => {
+		    const textObject = __runtime.getInstanceByUid(uid);
+			const placement = textObject.instVars.placement;
+			placements.push(placement);
+			if(textObject.isBold) {
+			  if(placement in objectMap[sound]) {
+			    selectedSounds.push(...objectMap[sound][placement]);
+				soundsAdded = true;
+			  } 
+			}
+		  });
+		  if(!soundsAdded) {
+		    if(placements.length) {
+			  placements.forEach((placement) => {
+			    if(placement in objectMap[sound]) {
+				  selectedSounds.push(...objectMap[sound][placement]);
+				  soundsAdded = true;
+				}
+			  });
+			}
+			if(!soundsAdded) {
+		      selectedSounds.push(...objectMap[sound]);
+			}
+		  }
+		} else {
+		  selectedSounds.push(...objectMap[sound]);
+		}
       }
     });
 	console.log("here");
@@ -9397,7 +9474,6 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
   }
   
   globalThis.menu__toggle_placement = async(text) => {
-  	console.log(text);
 	console.log(soundPlacementUIDMap);
     if(text.isBold == false) {
 	    text.text="[color=#00ff00]"+text.instVars.placement.toUpperCase()+"[/color]";

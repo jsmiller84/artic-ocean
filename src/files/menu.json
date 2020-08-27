@@ -196,6 +196,14 @@
             "medial",
             "final"
           ]
+        },
+        {
+          "sound": "k",
+          "placement": [
+            "initial",
+            "medial",
+            "final"
+          ]
         }
       ]
     },
@@ -262,14 +270,6 @@
         },
         {
           "sound": "t",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "k",
           "placement": [
             "initial",
             "medial",

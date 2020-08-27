@@ -1,0 +1,57 @@
+{
+	"name": "bark",
+	"plugin-id": "Sprite",
+	"sid": 658863306864338,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\ar\\bark.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1644666,
+						"collisionPoly": {
+							"points": [
+								0.215,
+								0.215,
+								0.5,
+								0.38333333333333336,
+								0.6,
+								0.3983333333333333,
+								0.9233333333333333,
+								0.5,
+								0.8866666666666667,
+								0.8866666666666667,
+								0.5,
+								0.965,
+								0.3416666666666667,
+								0.6566666666666666,
+								0.23333333333333334,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 847716202849793,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -54,10 +54,10 @@
 			const mainJsonURL = await __runtime.assets.getProjectFileUrl("Main.json");
 			const mainJsonResponse = await __runtime.assets.fetchJson(mainJsonURL);
 
-			let loadObjects = [];
-			globalThis.main__loadSounds.forEach((sound) => {
+			//let loadObjects = globalThis.main__loadSounds;
+			/*globalThis.main__loadSounds.forEach((sound) => {
 				loadObjects = loadObjects.concat(mainJsonResponse.objectMap[sound]);
-			})
+			})*/
 			
 
 			__runtime.objects.Bubble.getAllInstances().forEach((bubble) => {
@@ -65,7 +65,7 @@
 			});
 
 			const bubblePosArray = mainJsonResponse.initialBubblePositions;
-			objectsArray = loadObjects;
+			objectsArray = globalThis.main__loadSounds;
 
 			for(let ndx = 0; ndx < bubblePosArray.length; ++ndx) {
 				const x = bubblePosArray[ndx][0];

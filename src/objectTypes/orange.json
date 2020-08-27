@@ -1,0 +1,57 @@
+{
+	"name": "orange",
+	"plugin-id": "Sprite",
+	"sid": 917813972724825,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\or\\orange.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5443609,
+						"collisionPoly": {
+							"points": [
+								0.2,
+								0.2,
+								0.5,
+								0.065,
+								0.7,
+								0.29833333333333334,
+								0.8166666666666667,
+								0.5,
+								0.8833333333333333,
+								0.8833333333333333,
+								0.5,
+								0.9366666666666666,
+								0.17,
+								0.8283333333333334,
+								0.07166666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 365492286614973,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "marble",
+	"plugin-id": "Sprite",
+	"sid": 112489916218281,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\ar\\marble.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5022353,
+						"collisionPoly": {
+							"points": [
+								0.24,
+								0.24,
+								0.5,
+								0.37666666666666665,
+								0.7933333333333333,
+								0.205,
+								0.9433333333333334,
+								0.5,
+								0.7883333333333333,
+								0.7883333333333333,
+								0.5,
+								0.8283333333333334,
+								0.24,
+								0.7583333333333333,
+								0.01,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 681153275499194,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

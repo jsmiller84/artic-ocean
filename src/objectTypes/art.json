@@ -1,0 +1,57 @@
+{
+	"name": "art",
+	"plugin-id": "Sprite",
+	"sid": 984822425037281,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\ar\\art.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5119745,
+						"collisionPoly": {
+							"points": [
+								0.14833333333333334,
+								0.14833333333333334,
+								0.5,
+								0.06,
+								0.7883333333333333,
+								0.21,
+								0.95,
+								0.5,
+								0.865,
+								0.865,
+								0.5,
+								0.9666666666666667,
+								0.21333333333333335,
+								0.785,
+								0.07166666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 248922406322058,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

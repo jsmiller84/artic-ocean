@@ -1,0 +1,57 @@
+{
+	"name": "heart",
+	"plugin-id": "Sprite",
+	"sid": 859745402908823,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\ar\\heart.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6250525,
+						"collisionPoly": {
+							"points": [
+								0.14,
+								0.14,
+								0.5,
+								0.23833333333333334,
+								0.8483333333333334,
+								0.15,
+								0.915,
+								0.5,
+								0.7616666666666667,
+								0.7616666666666667,
+								0.5,
+								0.96,
+								0.23166666666666666,
+								0.7666666666666667,
+								0.07666666666666666,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 418594820695031,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

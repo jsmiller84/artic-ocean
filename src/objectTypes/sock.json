@@ -1,0 +1,57 @@
+{
+	"name": "sock",
+	"plugin-id": "Sprite",
+	"sid": 134567641331227,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\k\\final\\sock.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2129455,
+						"collisionPoly": {
+							"points": [
+								0.13333333333333333,
+								0.13333333333333333,
+								0.5,
+								0.5566666666666666,
+								0.47833333333333333,
+								0.52,
+								0.4716666666666667,
+								0.5,
+								0.8833333333333333,
+								0.8833333333333333,
+								0.5,
+								0.9033333333333333,
+								0.2,
+								0.7983333333333333,
+								0.12333333333333334,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 184657010580088,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

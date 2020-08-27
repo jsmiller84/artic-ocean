@@ -1,0 +1,57 @@
+{
+	"name": "popcorn",
+	"plugin-id": "Sprite",
+	"sid": 341984175717162,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\or\\popcorn.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1074273,
+						"collisionPoly": {
+							"points": [
+								0.21,
+								0.21,
+								0.5,
+								0.055,
+								0.7966666666666666,
+								0.20166666666666666,
+								0.7966666666666666,
+								0.5,
+								0.8733333333333333,
+								0.8733333333333333,
+								0.5,
+								0.94,
+								0.11833333333333333,
+								0.88,
+								0.17666666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 966838513569825,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

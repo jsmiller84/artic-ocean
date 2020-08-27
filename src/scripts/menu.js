@@ -45,7 +45,9 @@
 
   //object containing all sound pages that will be displayed
   let soundPages = null;
-
+  
+  let objectMap = null;
+  
   let xTextStartPosition = 600;
   const yTextStartPosition = 200;
   //this is for toggle buttons to be able to toggle sounds on and off
@@ -59,8 +61,13 @@
     if (!initialized) {
       const menuJsonURL = await __runtime.assets.getProjectFileUrl("Menu.json");
       const menuJsonResponse = await __runtime.assets.fetchJson(menuJsonURL);
+	  
+	  const mainJsonURL = await __runtime.assets.getProjectFileUrl("Main.json");
+	  const mainJsonResponse = await __runtime.assets.fetchJson(mainJsonURL);
 
       soundPages = menuJsonResponse.pages;
+	  objectMap = mainJsonResponse.objectMap;
+	  
       initialized = true;
     }
     await setPage(_pageNumber);
@@ -168,9 +175,6 @@
     soundObject.sizePt = size;
     soundObject.width = width;
     soundObject.height = 100;
-	
-	await __runtime.callFunction("pinToVerticalScroll", soundObject.uid);
-
 
     return soundObject;
   }
@@ -183,12 +187,49 @@
     return toggle;
   }
 
+  //
+  // This function is called before we move onto the main page
+  // This will iterate all of the toggle buttons ... which might not be correct
+  // in the future.
   globalThis.menu__select_sounds = async (toggleButtons) => {
-
+    
     toggleButtons.forEach((button) => {
+	  const sound = button.instVars.sound;
+	  
       if (button.animationFrame === 1) {
-        selectedSounds.push(button.instVars.sound);
-        //console.log(button.instVars.refSound);
+	    if(sound in soundPlacementUIDMap) {
+		  const placementObjects = soundPlacementUIDMap[sound];
+		  		  
+		  let soundsAdded = false;
+		  let placements = [];
+		  
+		  placementObjects.forEach((uid) => {
+		    const textObject = __runtime.getInstanceByUid(uid);
+			const placement = textObject.instVars.placement;
+			placements.push(placement);
+			if(textObject.isBold) {
+			  if(placement in objectMap[sound]) {
+			    selectedSounds.push(...objectMap[sound][placement]);
+				soundsAdded = true;
+			  } 
+			}
+		  });
+		  if(!soundsAdded) {
+		    if(placements.length) {
+			  placements.forEach((placement) => {
+			    if(placement in objectMap[sound]) {
+				  selectedSounds.push(...objectMap[sound][placement]);
+				  soundsAdded = true;
+				}
+			  });
+			}
+			if(!soundsAdded) {
+		      selectedSounds.push(...objectMap[sound]);
+			}
+		  }
+		} else {
+		  selectedSounds.push(...objectMap[sound]);
+		}
       }
     });
 	console.log("here");
@@ -227,7 +268,6 @@
   }
   
   globalThis.menu__toggle_placement = async(text) => {
-  	console.log(text);
 	console.log(soundPlacementUIDMap);
     if(text.isBold == false) {
 	    text.text="[color=#00ff00]"+text.instVars.placement.toUpperCase()+"[/color]";

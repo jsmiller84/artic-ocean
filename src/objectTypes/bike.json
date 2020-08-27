@@ -1,0 +1,57 @@
+{
+	"name": "bike",
+	"plugin-id": "Sprite",
+	"sid": 303130094107123,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\k\\final\\bike.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2888541,
+						"collisionPoly": {
+							"points": [
+								0.22166666666666668,
+								0.22166666666666668,
+								0.5,
+								0.3616666666666667,
+								0.795,
+								0.20333333333333334,
+								0.9316666666666666,
+								0.5,
+								0.8166666666666667,
+								0.8166666666666667,
+								0.5,
+								0.6833333333333333,
+								0.18333333333333332,
+								0.815,
+								0.06166666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 231263537274414,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
