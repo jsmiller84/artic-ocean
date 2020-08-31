@@ -58,11 +58,13 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 668299148814011,
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 939951173855112,
 					"parameters": {
-						"object": "Toggle"
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Toggle"
 					}
 				}
 			],
