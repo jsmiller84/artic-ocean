@@ -9348,7 +9348,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
       let soundObject = soundList[ndx];
 
       //create the top level letter/sound's text
-      const soundGameObject = await createText(soundObject.sound, currX + 220, currY + 10, 45, 125);
+      const soundGameObject = await createText(soundObject.sound, currX + 220, currY + 20, 45, 125);
       //create the top level letter/sound's toggle button
       const toggleGameObject = await createToggle(soundObject, currX + 165, currY + 55, 60, 60);
 
@@ -9392,14 +9392,14 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
           const blendSoundObject = soundObject.blends[bNdx];
 
           const blendToggleGameObject = await createToggle(blendSoundObject, currX + 185, currY + 55, 50, 50);
-		  const blendGameObject = await createText(blendSoundObject.sound, currX + 230, currY + 10, 40, 135);
+		  const blendGameObject = await createText(blendSoundObject.sound, currX + 230, currY + 20, 40, 135);
 
 
           if ('placement' in blendSoundObject) {
             let localX = currX + 380;
 
             for (let plNdx = 0; plNdx < blendSoundObject.placement.length; ++plNdx) {
-              const placementObject = await createText(blendSoundObject.placement[plNdx], localX, currY + 10, 35, 225);
+              const placementObject = await createText(blendSoundObject.placement[plNdx], localX, currY + 20, 35, 225);
 
               placementObject.isVisible = false;
 
