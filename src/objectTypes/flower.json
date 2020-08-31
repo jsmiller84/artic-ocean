@@ -1,0 +1,59 @@
+{
+	"name": "flower",
+	"plugin-id": "Sprite",
+	"sid": 411139215765826,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\er\\flower.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9916517,
+						"collisionPoly": {
+							"points": [
+								0.09500000000000006,
+								0.19333333333333344,
+								0.2733333333333333,
+								0.1183333333333333,
+								0.6699999999999995,
+								0.08166666666666667,
+								0.8166666666666667,
+								0.26333333333333325,
+								0.8466666666666672,
+								0.6766666666666663,
+								0.8816666666666666,
+								0.9216666666666666,
+								0.6649999999999998,
+								1,
+								0.12249999999999998,
+								0.9766666666666662,
+								0.0466666666666667,
+								0.4750000000000002
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 646550543402723,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

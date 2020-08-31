@@ -793,11 +793,11 @@
 								{
 									"id": "set-velocity",
 									"objectClass": "objectFamily",
-									"sid": 770088680095102,
+									"sid": 854701202000199,
 									"behaviorType": "Physics",
 									"parameters": {
 										"x-component": "0",
-										"y-component": "300"
+										"y-component": "600"
 									}
 								},
 								{

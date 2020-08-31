@@ -1,0 +1,63 @@
+{
+	"name": "fern",
+	"plugin-id": "Sprite",
+	"sid": 102226955210335,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\er\\fern.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8950827,
+						"collisionPoly": {
+							"points": [
+								0.0049999999999999906,
+								0.5816666666666667,
+								0,
+								0.41583333333333355,
+								0.07166666666666693,
+								0.12000000000000001,
+								0.32500000000000023,
+								0.05500000000000006,
+								0.6649999999999989,
+								0.11333333333333329,
+								0.7899999999999993,
+								0.17666666666666642,
+								0.9899999999999998,
+								0.5308333333333333,
+								0.9616666666666673,
+								0.8333333333333338,
+								0.7483333333333338,
+								0.9300000000000003,
+								0.4099999999999999,
+								0.8999999999999998,
+								0.09750000000000002,
+								0.9316666666666669
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 109943477878536,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

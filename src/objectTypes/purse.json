@@ -1,0 +1,57 @@
+{
+	"name": "purse",
+	"plugin-id": "Sprite",
+	"sid": 574923241506656,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\er\\purse.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6349166,
+						"collisionPoly": {
+							"points": [
+								0.20833333333333334,
+								0.1283333333333333,
+								0.3533333333333333,
+								0.019999999999999997,
+								0.6099999999999997,
+								0.013333333333333332,
+								0.8233333333333334,
+								0.34,
+								0.9666666666666673,
+								0.8483333333333339,
+								0.28666666666666657,
+								1,
+								0.10666666666666665,
+								0.9316666666666668,
+								0.045000000000000075,
+								0.806666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 343311132012441,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

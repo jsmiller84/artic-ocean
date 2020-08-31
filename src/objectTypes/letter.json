@@ -1,0 +1,57 @@
+{
+	"name": "letter",
+	"plugin-id": "Sprite",
+	"sid": 448303915298887,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\er\\letter.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5318659,
+						"collisionPoly": {
+							"points": [
+								0.43333333333333346,
+								0.42333333333333345,
+								0.435,
+								0,
+								0.9966666666666667,
+								0.046666666666666676,
+								0.9616666666666663,
+								0.7783333333333339,
+								0.6616666666666665,
+								0.8049999999999995,
+								0.16499999999999998,
+								0.9966666666666666,
+								0.018333333333333337,
+								0.6733333333333337,
+								0.20333333333333334,
+								0.3733333333333336
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 837435443493754,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

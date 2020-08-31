@@ -100,7 +100,8 @@
 		"items": [
 			"LoadingText",
 			"Text",
-			"Border"
+			"Border",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -227,6 +228,22 @@
 								],
 								"subfolders": [],
 								"name": "ar"
+							},
+							{
+								"items": [
+									"bird",
+									"butter",
+									"fern",
+									"flower",
+									"girl",
+									"hammer",
+									"letter",
+									"purse",
+									"spider",
+									"zipper"
+								],
+								"subfolders": [],
+								"name": "er"
 							}
 						],
 						"name": "Objects"

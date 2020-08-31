@@ -1,0 +1,61 @@
+{
+	"name": "zipper",
+	"plugin-id": "Sprite",
+	"sid": 674236339513860,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\er\\zipper.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5009388,
+						"collisionPoly": {
+							"points": [
+								0.1266666666666666,
+								0.05500000000000004,
+								0.375,
+								0,
+								0.6399999999999999,
+								0,
+								0.8566666666666667,
+								0.056666666666666775,
+								0.7650000000000001,
+								0.5083333333333335,
+								0.73,
+								0.9933333333333333,
+								0.40166666666666656,
+								0.9966666666666666,
+								0.23833333333333345,
+								0.9366666666666671,
+								0.2475000000000001,
+								0.7416666666666669,
+								0.25666666666666677,
+								0.5466666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 148587370669159,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

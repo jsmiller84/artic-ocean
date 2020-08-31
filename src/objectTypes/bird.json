@@ -1,0 +1,61 @@
+{
+	"name": "bird",
+	"plugin-id": "Sprite",
+	"sid": 459085661382565,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\er\\bird.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3508938,
+						"collisionPoly": {
+							"points": [
+								0.9316666666666671,
+								0.040000000000000105,
+								0.9883333333333336,
+								0.16333333333333347,
+								0.9949999999999999,
+								0.3966666666666669,
+								0.9366666666666663,
+								0.8166666666666673,
+								0.8300000000000001,
+								0.9066666666666671,
+								0.015000000000000032,
+								0.9149999999999998,
+								0,
+								0.8699999999999991,
+								0.4566666666666666,
+								0.4466666666666682,
+								0.7441666666666673,
+								0.05583333333333349,
+								0.8366666666666674,
+								0.011666666666666738
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 135019203038388,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
