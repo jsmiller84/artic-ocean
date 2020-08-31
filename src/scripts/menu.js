@@ -103,7 +103,7 @@
       let soundObject = soundList[ndx];
 
       //create the top level letter/sound's text
-      const soundGameObject = await createText(soundObject.sound, currX + 220, currY + 10, 60, 125);
+      const soundGameObject = await createText(soundObject.sound, currX + 220, currY + 10, 45, 125);
       //create the top level letter/sound's toggle button
       const toggleGameObject = await createToggle(soundObject, currX + 165, currY + 55, 60, 60);
 
@@ -117,7 +117,7 @@
         let localX = currX + 380;
 
         for (let plNdx = 0; plNdx < soundObject.placement.length; ++plNdx) {
-          const placementObject = await createText(soundObject.placement[plNdx], localX, currY + 25, 45, 225);
+          const placementObject = await createText(soundObject.placement[plNdx], localX, currY + 25, 35, 225);
           //need to make sure this text can be clicked.
           placementObject.isVisible = false;
 
@@ -134,8 +134,12 @@
           localX += 240;
         }
       }
-
-      currY += 80;
+      
+	  if("blends" in soundObject) {
+	    currY += 100;
+	  } else {
+	    currY += 80;
+	  }
 
       if ("blends" in soundObject) {
         for (let bNdx = 0; bNdx < soundObject.blends.length; ++bNdx) {
@@ -143,14 +147,14 @@
           const blendSoundObject = soundObject.blends[bNdx];
 
           const blendToggleGameObject = await createToggle(blendSoundObject, currX + 185, currY + 55, 50, 50);
-		  const blendGameObject = await createText(blendSoundObject.sound, currX + 230, currY + 10, 50, 135);
+		  const blendGameObject = await createText(blendSoundObject.sound, currX + 230, currY + 10, 40, 135);
 
 
           if ('placement' in blendSoundObject) {
             let localX = currX + 380;
 
             for (let plNdx = 0; plNdx < blendSoundObject.placement.length; ++plNdx) {
-              const placementObject = await createText(blendSoundObject.placement[plNdx], localX, currY + 10, 45, 225);
+              const placementObject = await createText(blendSoundObject.placement[plNdx], localX, currY + 10, 35, 225);
 
               placementObject.isVisible = false;
 
@@ -289,7 +293,7 @@
   globalThis.menu__toggle_placement = async(text) => {
 	console.log(soundPlacementUIDMap);
     if(text.isBold == false) {
-	    text.text="[color=#00ff00]"+text.instVars.placement.toUpperCase()+"[/color]";
+	    text.text="[color=#3DA86B]"+text.instVars.placement.toUpperCase()+"[/color]";
 		text.isBold = true;
 	}
 	else {
