@@ -8356,6 +8356,33 @@ SetWrapping(w){this._SetWrapByWord(w===0)}}};
 'use strict';{const C3=self.C3;C3.Plugins.Text.Exps={Text(){return this._text},PlainText(){if(this._enableBBcode)return C3.BBString.StripAnyTags(this._text);else return this._text},FaceName(){return this._faceName},FaceSize(){return this._ptSize},TextWidth(){this._UpdateTextSize();return this._rendererText.GetTextWidth()},TextHeight(){this._UpdateTextSize();return this._rendererText.GetTextHeight()},LineHeight(){return this._lineHeightOffset}}};
 
 
+'use strict';{const C3=self.C3;C3.Plugins.TiledBg=class TiledBgPlugin extends C3.SDKPluginBase{constructor(opts){super(opts)}Release(){super.Release()}}};
+
+
+'use strict';{const C3=self.C3;function WrapModeToStr(wrapMode){switch(wrapMode){case 0:return"clamp-to-edge";case 1:return"repeat";case 2:return"mirror-repeat"}return"repeat"}C3.Plugins.TiledBg.Type=class TiledBgType extends C3.SDKTypeBase{constructor(objectClass,exportData){super(objectClass);this._wrapX="repeat";this._wrapY="repeat";if(exportData){this._wrapX=WrapModeToStr(exportData[0]);this._wrapY=WrapModeToStr(exportData[1])}}Release(){super.Release()}OnCreate(){this.GetImageInfo().LoadAsset(this._runtime)}LoadTextures(renderer){return this.GetImageInfo().LoadStaticTexture(renderer,
+{sampling:this._runtime.GetSampling(),wrapX:this._wrapX,wrapY:this._wrapY})}ReleaseTextures(){this.GetImageInfo().ReleaseTexture()}}};
+
+
+'use strict';{const C3=self.C3;const INITIALLY_VISIBLE=0;const ORIGIN=1;const IMAGE_OFFSET_X=4;const IMAGE_OFFSET_Y=5;const IMAGE_SCALE_X=6;const IMAGE_SCALE_Y=7;const IMAGE_ANGLE=8;const tempQuad=C3.New(C3.Quad);const rcTex=C3.New(C3.Rect);const qTex=C3.New(C3.Quad);C3.Plugins.TiledBg.Instance=class TiledBgInstance extends C3.SDKWorldInstanceBase{constructor(inst,properties){super(inst);this._imageOffsetX=0;this._imageOffsetY=0;this._imageScaleX=1;this._imageScaleY=1;this._imageAngle=0;this._ownImageInfo=
+null;if(properties){this.GetWorldInfo().SetVisible(!!properties[INITIALLY_VISIBLE]);this._imageOffsetX=properties[IMAGE_OFFSET_X];this._imageOffsetY=properties[IMAGE_OFFSET_Y];this._imageScaleX=properties[IMAGE_SCALE_X];this._imageScaleY=properties[IMAGE_SCALE_Y];this._imageAngle=C3.toRadians(properties[IMAGE_ANGLE])}}Release(){this._ReleaseOwnImage();super.Release()}_ReleaseOwnImage(){if(this._ownImageInfo){this._ownImageInfo.Release();this._ownImageInfo=null}}Draw(renderer){const imageInfo=this.GetCurrentImageInfo();
+const texture=imageInfo.GetTexture();if(!texture)return;const wi=this.GetWorldInfo();let q=wi.GetBoundingQuad();renderer.SetTexture(texture);const imageWidth=imageInfo.GetWidth();const imageHeight=imageInfo.GetHeight();const imageOffsetX=this._imageOffsetX/imageWidth;const imageOffsetY=this._imageOffsetY/imageHeight;rcTex.set(0,0,wi.GetWidth()/(imageWidth*this._imageScaleX),wi.GetHeight()/(imageHeight*this._imageScaleY));rcTex.offset(-imageOffsetX,-imageOffsetY);if(this._runtime.IsPixelRoundingEnabled()){const ox=
+Math.round(wi.GetX())-wi.GetX();const oy=Math.round(wi.GetY())-wi.GetY();tempQuad.copy(q);tempQuad.offset(ox,oy);q=tempQuad}if(this._imageAngle===0)renderer.Quad3(q,rcTex);else{qTex.setFromRotatedRect(rcTex,-this._imageAngle);renderer.Quad4(q,qTex)}}GetCurrentImageInfo(){return this._ownImageInfo||this._objectClass.GetImageInfo()}_SetImageOffsetX(x){if(this._imageOffsetX===x)return;this._imageOffsetX=x;this._runtime.UpdateRender()}_GetImageOffsetX(){return this._imageOffsetX}_SetImageOffsetY(y){if(this._imageOffsetY===
+y)return;this._imageOffsetY=y;this._runtime.UpdateRender()}_GetImageOffsetY(){return this._imageOffsetY}_SetImageScaleX(x){if(this._imageScaleX===x)return;this._imageScaleX=x;this._runtime.UpdateRender()}_GetImageScaleX(){return this._imageScaleX}_SetImageScaleY(y){if(this._imageScaleY===y)return;this._imageScaleY=y;this._runtime.UpdateRender()}_GetImageScaleY(){return this._imageScaleY}_SetImageAngle(a){if(this._imageAngle===a)return;this._imageAngle=a;this._runtime.UpdateRender()}_GetImageAngle(){return this._imageAngle}GetPropertyValueByIndex(index){switch(index){case IMAGE_OFFSET_X:return this._GetImageOffsetX();
+case IMAGE_OFFSET_Y:return this._GetImageOffsetY();case IMAGE_SCALE_X:return this._GetImageScaleX();case IMAGE_SCALE_Y:return this._GetImageScaleY();case IMAGE_ANGLE:return this._GetImageAngle()}}SetPropertyValueByIndex(index,value){switch(index){case IMAGE_OFFSET_X:this._SetImageOffsetX(value);break;case IMAGE_OFFSET_Y:this._SetImageOffsetY(value);break;case IMAGE_SCALE_X:this._SetImageScaleX(value);break;case IMAGE_SCALE_Y:this._SetImageScaleY(value);break;case IMAGE_ANGLE:this._SetImageAngle(value);
+break}}GetScriptInterfaceClass(){return self.ITiledBackgroundInstance}};const map=new WeakMap;self.ITiledBackgroundInstance=class ITiledBackgroundInstance extends self.IWorldInstance{constructor(){super();map.set(this,self.IInstance._GetInitInst().GetSdkInstance())}set imageOffsetX(x){map.get(this)._SetImageOffsetX(x)}get imageOffsetX(){return map.get(this)._GetImageOffsetX()}set imageOffsetY(y){map.get(this)._SetImageOffsetY(y)}get imageOffsetY(){return map.get(this)._GetImageOffsetY()}set imageScaleX(x){map.get(this)._SetImageScaleX(x)}get imageScaleX(){return map.get(this)._GetImageScaleX()}set imageScaleY(y){map.get(this)._SetImageScaleY(y)}get imageScaleY(){return map.get(this)._GetImageScaleY()}set imageAngle(a){map.get(this)._SetImageAngle(a)}get imageAngle(){return map.get(this)._GetImageAngle()}set imageAngleDegrees(a){map.get(this)._SetImageAngle(C3.toRadians(a))}get imageAngleDegrees(){return C3.toDegrees(map.get(this)._GetImageAngle())}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.TiledBg.Cnds={OnURLLoaded(){return true},OnURLFailed(){return true}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.TiledBg.Acts={SetImageOffsetX(x){this._SetImageOffsetX(x)},SetImageOffsetY(y){this._SetImageOffsetY(y)},SetImageScaleX(x){this._SetImageScaleX(x/100)},SetImageScaleY(y){this._SetImageScaleY(y/100)},SetImageAngle(a){this._SetImageAngle(C3.toRadians(a))},SetEffect(effect){this.GetWorldInfo().SetBlendMode(effect);this._runtime.UpdateRender()},async LoadURL(url,crossOrigin){if(this._ownImageInfo&&this._ownImageInfo.GetURL()===url)return;const runtime=this._runtime;
+const imageInfo=C3.New(C3.ImageInfo);await imageInfo.LoadDynamicAsset(runtime,url);if(!imageInfo.IsLoaded()){this.Trigger(C3.Plugins.TiledBg.Cnds.OnURLFailed);return}if(this.WasReleased()){imageInfo.Release();return null}const texture=await imageInfo.LoadStaticTexture(runtime.GetWebGLRenderer(),{sampling:this._runtime.GetSampling(),wrapX:"repeat",wrapY:"repeat"});if(!texture)return;if(this.WasReleased()){imageInfo.Release();return}this._ReleaseOwnImage();this._ownImageInfo=imageInfo;runtime.UpdateRender();
+await this.TriggerAsync(C3.Plugins.TiledBg.Cnds.OnURLLoaded)}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.TiledBg.Exps={ImageWidth(){return this.GetCurrentImageInfo().GetWidth()},ImageHeight(){return this.GetCurrentImageInfo().GetHeight()},ImageOffsetX(){return this._imageOffsetX},ImageOffsetY(){return this._imageOffsetY},ImageScaleX(){return this._imageScaleX*100},ImageScaleY(){return this._imageScaleY*100},ImageAngle(){return C3.toDegrees(this._imageAngle)}}};
+
+
 'use strict';{const C3=self.C3;C3.Behaviors.Persist=class PersistBehavior extends C3.SDKBehaviorBase{constructor(opts){super(opts)}Release(){super.Release()}}};
 
 
@@ -8549,6 +8576,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Behaviors.solid,
 		C3.Plugins.Arr,
 		C3.Plugins.Text,
+		C3.Plugins.TiledBg,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.ScriptsInEvents.Main_Event2_Act1,
@@ -8747,18 +8775,17 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{placement: 0},
 		{canToggle: 0},
 		{ItemText: 0},
-		{MenuBackground: 0},
-		{Scroll: 0},
 		{StartGameText: 0},
 		{Toggle: 0},
 		{SubToggle: 0},
 		{PageUp: 0},
 		{PageDown: 0},
 		{VerticalScroll: 0},
+		{MenuBackground: 0},
+		{SoundBorder: 0},
 		{LoadingText: 0},
 		{Text: 0},
 		{Border: 0},
-		{Sprite: 0},
 		{objectFamily: 0},
 		{initialized: 0},
 		{objectTouched: 0},
@@ -9265,7 +9292,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
   
   let objectMap = null;
   
-  let xTextStartPosition = 600;
+  let xTextStartPosition = 500;
   const yTextStartPosition = 200;
   //this is for toggle buttons to be able to toggle sounds on and off
   const uidToSoundMap = {};
@@ -9288,7 +9315,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
       initialized = true;
     }
     await setPage(_pageNumber);
-	xTextStartPosition += 1250;
+	xTextStartPosition += 1100;
 	await setPage(_pageNumber + 1);
   }
 
@@ -9309,7 +9336,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 
     let currX = xTextStartPosition;
     let currY = yTextStartPosition;
-    const marginTop = 35;
+    const marginTop = 100;
 
     for (let ndx = 0; ndx < soundList.length; ++ndx) {
       //this is the margin between 2 top level sounds
@@ -9323,6 +9350,11 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
       const soundGameObject = await createText(soundObject.sound, currX + 220, currY + 10, 60, 125);
       //create the top level letter/sound's toggle button
       const toggleGameObject = await createToggle(soundObject, currX + 165, currY + 55, 60, 60);
+
+      const topBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 100, currY);
+	  topBorder.height = 14;
+	  topBorder.width = 1000;
+	  const topY = currY;
 
       //if the top level soundObject has placement, create the placement text that can be clicked on to enable.
       if ('placement' in soundObject) {
@@ -9343,7 +9375,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
             soundPlacementUIDMap[soundObject.sound] = [];
           }
           soundPlacementUIDMap[soundObject.sound].push(placementObject.uid);
-          localX += 270;
+          localX += 240;
         }
       }
 
@@ -9376,12 +9408,26 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
               }
               soundPlacementUIDMap[blendSoundObject.sound].push(placementObject.uid);
 
-              localX += 270;
+              localX += 240;
             }
           }
           currY += 70;
         }
       }
+	  const bottomBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 100, currY + 20);
+	  bottomBorder.height = 14;
+	  bottomBorder.width = 1000;
+	  
+	  const leftBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 100, topY);
+	  leftBorder.height = currY - topY + 30;
+	  leftBorder.width = 14;
+	  
+	  const rightBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 1085, topY);
+	  rightBorder.height = currY - topY + 30;
+	  rightBorder.width = 14;
+
+
+	  
     }
   }
 

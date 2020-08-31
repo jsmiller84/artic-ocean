@@ -48,7 +48,7 @@
   
   let objectMap = null;
   
-  let xTextStartPosition = 600;
+  let xTextStartPosition = 500;
   const yTextStartPosition = 200;
   //this is for toggle buttons to be able to toggle sounds on and off
   const uidToSoundMap = {};
@@ -71,7 +71,7 @@
       initialized = true;
     }
     await setPage(_pageNumber);
-	xTextStartPosition += 1250;
+	xTextStartPosition += 1100;
 	await setPage(_pageNumber + 1);
   }
 
@@ -92,7 +92,7 @@
 
     let currX = xTextStartPosition;
     let currY = yTextStartPosition;
-    const marginTop = 35;
+    const marginTop = 100;
 
     for (let ndx = 0; ndx < soundList.length; ++ndx) {
       //this is the margin between 2 top level sounds
@@ -106,6 +106,11 @@
       const soundGameObject = await createText(soundObject.sound, currX + 220, currY + 10, 60, 125);
       //create the top level letter/sound's toggle button
       const toggleGameObject = await createToggle(soundObject, currX + 165, currY + 55, 60, 60);
+
+      const topBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 100, currY);
+	  topBorder.height = 14;
+	  topBorder.width = 1000;
+	  const topY = currY;
 
       //if the top level soundObject has placement, create the placement text that can be clicked on to enable.
       if ('placement' in soundObject) {
@@ -126,7 +131,7 @@
             soundPlacementUIDMap[soundObject.sound] = [];
           }
           soundPlacementUIDMap[soundObject.sound].push(placementObject.uid);
-          localX += 270;
+          localX += 240;
         }
       }
 
@@ -159,12 +164,26 @@
               }
               soundPlacementUIDMap[blendSoundObject.sound].push(placementObject.uid);
 
-              localX += 270;
+              localX += 240;
             }
           }
           currY += 70;
         }
       }
+	  const bottomBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 100, currY + 20);
+	  bottomBorder.height = 14;
+	  bottomBorder.width = 1000;
+	  
+	  const leftBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 100, topY);
+	  leftBorder.height = currY - topY + 30;
+	  leftBorder.width = 14;
+	  
+	  const rightBorder = await __runtime.objects.SoundBorder.createInstance(0, currX + 1085, topY);
+	  rightBorder.height = currY - topY + 30;
+	  rightBorder.width = 14;
+
+
+	  
     }
   }
 

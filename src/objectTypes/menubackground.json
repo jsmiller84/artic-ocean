@@ -1,7 +1,7 @@
 {
 	"name": "MenuBackground",
 	"plugin-id": "Sprite",
-	"sid": 556363252232059,
+	"sid": 694783828306628,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -15,10 +15,10 @@
 						"height": 2160,
 						"originX": 0,
 						"originY": 0,
-						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\dist\\background\\menu-background.png",
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\background\\scroll-background-8-30-srgb.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7560357,
+						"imageSpriteId": 2408225,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -43,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 183960960495679,
+				"sid": 754350986030913,
 				"name": "static",
 				"isLooping": false,
 				"isPingPong": false,
