@@ -58,13 +58,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 939951173855112,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 178246381645711,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Toggle"
+						"object": "Toggle"
 					}
 				}
 			],
@@ -80,13 +78,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 415342501443167,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 191662384928692,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "ItemText"
+						"object": "ItemText"
 					}
 				},
 				{

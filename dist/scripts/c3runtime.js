@@ -8677,7 +8677,6 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.ScriptsInEvents.Menu_Event2_Act1,
 		C3.ScriptsInEvents.Menu_Event3_Act1,
-		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.ScriptsInEvents.Menu_Event4_Act1,
 		C3.Plugins.Text.Cnds.IsBoolInstanceVarSet,
 		C3.ScriptsInEvents.Menu_Event5_Act1,
