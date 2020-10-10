@@ -1,0 +1,63 @@
+{
+	"name": "ear",
+	"plugin-id": "Sprite",
+	"sid": 208079043254548,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\ear\\initial\\ear.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5537357,
+						"collisionPoly": {
+							"points": [
+								0.15666666666666676,
+								0.17333333333333337,
+								0.3233333333333334,
+								0.030000000000000002,
+								0.5166666666666664,
+								0.036666666666666695,
+								0.74,
+								0.17999999999999988,
+								0.7850000000000004,
+								0.755,
+								0.7475000000000006,
+								0.915,
+								0.5954166666666667,
+								0.9783333333333332,
+								0.4783333333333334,
+								0.9566666666666667,
+								0.2833333333333333,
+								0.8266666666666667,
+								0.15000000000000002,
+								0.5950000000000003,
+								0.1133333333333334,
+								0.3841666666666668
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 570756001439351,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

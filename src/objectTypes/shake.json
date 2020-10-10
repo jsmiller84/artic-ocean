@@ -15,10 +15,10 @@
 						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "E:\\projects\\artic-ocean\\resources\\dist\\objects\\sh\\shake.png",
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\sh\\initial\\shake.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7270038,
+						"imageSpriteId": 4129009,
 						"collisionPoly": {
 							"points": [
 								0.013333333333333332,

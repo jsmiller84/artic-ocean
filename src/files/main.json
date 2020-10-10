@@ -10,15 +10,19 @@
 	"objectMap": {
 		"k": { 
 		    "initial": ["cake", "candy", "car", "cow", "cup", "cut", "key", "kick", "kiss", "cat", "fork"],
-			"medial": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
+			"medial": [],
 			"final": ["bike", "book", "duck", "fork", "hawk", "kick", "lick", "milk", "pink", "rake", "rock", "sock"]
 		},
 		"sh": {
 		    "initial": ["shadow", "shake", "shampoo", "shapes", "shark", "sheep", "shell", "ship", "shoe", "shot", "shovel", "shower"],
-			"medial": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
-			"final": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"]
+			"medial": [],
+			"final": ["fish"]
 		},
-		"st": ["stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump"],
+		"st": {
+		  "initial": ["stamp", "star", "stick", "stingray", "stool", "stop", "stork", "storm", "strawberry", "stump"],
+		  "medial": [],
+		  "final": []
+		},
 		"p": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"l": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"bl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
@@ -27,12 +31,32 @@
 		"kl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"pl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"r": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
-		"air": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
-		"ar": ["art", "bark", "card", "dark", "garlic", "heart", "marble", "sparkle", "shark", "star"],
-		"ear": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
+		"air": {
+		  "initial": ["arrow"],
+		  "medial": ["cherry", "hairbrush", "parachute", "stairs"],
+		  "final": ["bear", "pear", "square", "wheelchair"]
+		},
+		"ar": {
+		  "initial": ["art"],
+		  "medial": ["bark", "card", "dark", "garlic", "heart", "marble", "sparkle", "shark"],
+		  "final": ["star", "car"]
+		},
+		"ear": {
+		  "initial": ["ear", "earring"],
+		  "medial": ["beard", "cereal", "pyramid", "zero"],
+		  "final": ["chandelier", "cheer", "deer", "ear", "year"]
+		},
 		"ire": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
-		"or": ["door", "forest", "four", "horse", "north", "orange", "popcorn", "shorts", "surfboard", "tornado"],
-		"er": ["bird", "butter", "fern", "flower", "girl", "hammer", "letter", "purse", "spider", "zipper"],
+		"or": {
+		  "initial": ["orange"],
+		  "medial": ["forest", "horse", "north", "popcorn", "shorts", "surfboard", "tornado"],
+		  "final": ["door", "four"]
+		},
+		"er": {
+		  "initial": [],
+		  "medial": ["bird", "fern", "girl", "purse"],
+		  "final": ["butter", "flower", "hammer", "letter", "spider", "zipper"]
+		},
 		"rl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"br": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"dr": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],

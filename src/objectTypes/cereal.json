@@ -1,0 +1,59 @@
+{
+	"name": "cereal",
+	"plugin-id": "Sprite",
+	"sid": 611273641738168,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\ear\\medial\\cereal.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2189009,
+						"collisionPoly": {
+							"points": [
+								0.34833333333333333,
+								0.34833333333333333,
+								0.6450000000000004,
+								0.0016666666666666668,
+								0.7433333333333326,
+								0.01166666666666668,
+								0.9983333333333337,
+								0.24499999999999997,
+								0.6683333333333331,
+								0.6783333333333333,
+								0.47000000000000014,
+								0.9683333333333336,
+								0.19500000000000012,
+								0.9633333333333334,
+								0.08500000000000002,
+								0.7400000000000002,
+								0.03500000000000003,
+								0.5133333333333329
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 807635835939379,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

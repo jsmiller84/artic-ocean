@@ -21,9 +21,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap-object",
+					"id": "on-touched-object",
 					"objectClass": "Touch",
-					"sid": 877378000958226,
+					"sid": 955459533144117,
 					"parameters": {
 						"object": "StartGameText"
 					}
@@ -32,7 +32,7 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "menu__select_sounds(runtime.objects.Toggle.getAllInstances());"
+					"script": "menu__select_sounds();"
 				}
 			],
 			"sid": 132388939264577
@@ -107,66 +107,44 @@
 			"sid": 597686223964359
 		},
 		{
-			"functionName": "pinToVerticalScroll",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionIsAsync": false,
-			"functionParameters": [
-				{
-					"name": "uid",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"sid": 484363438687797
-				}
-			],
-			"eventType": "function-block",
+			"eventType": "block",
 			"conditions": [
 				{
-					"id": "pick-all",
-					"objectClass": "System",
-					"sid": 212922618022442,
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 425646128693407,
 					"parameters": {
-						"object": "VerticalScroll"
+						"object": "UpText"
 					}
 				}
 			],
-			"actions": [],
-			"sid": 220060904138721,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-by-unique-id",
-							"objectClass": "ItemText",
-							"sid": 911550754785379,
-							"parameters": {
-								"unique-id": "uid"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "ItemText",
-							"sid": 802627115126062,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "VerticalScroll",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
-						}
-					],
-					"sid": 494948319277911
+					"type": "script",
+					"script": "menu__toggle_pageUp();"
 				}
-			]
+			],
+			"sid": 129949179247228
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 611513683198907,
+					"parameters": {
+						"object": "DownText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "menu__toggle_pageDown();"
+				}
+			],
+			"sid": 527710510513960
 		}
 	],
 	"sid": 801155953161655

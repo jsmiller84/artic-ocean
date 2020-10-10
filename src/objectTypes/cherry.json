@@ -1,0 +1,63 @@
+{
+	"name": "cherry",
+	"plugin-id": "Sprite",
+	"sid": 165736755238957,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\air\\medial\\cherry.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5384425,
+						"collisionPoly": {
+							"points": [
+								0.37166666666666637,
+								0.15666666666666645,
+								0.5233333333333334,
+								0.018333333333333333,
+								0.8849999999999997,
+								0.19166666666666662,
+								0.963333333333333,
+								0.37833333333333347,
+								0.8933333333333333,
+								0.6908333333333335,
+								0.795,
+								0.8120833333333332,
+								0.47416666666666685,
+								0.9643750000000001,
+								0.21333333333333332,
+								1,
+								0.023333333333333397,
+								0.866666666666666,
+								0.05166666666666673,
+								0.589999999999999,
+								0.2466666666666668,
+								0.5433333333333332
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 133408973804126,
+				"name": "cherries",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

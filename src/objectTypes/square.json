@@ -1,7 +1,7 @@
 {
-	"name": "PageDown",
+	"name": "square",
 	"plugin-id": "Sprite",
-	"sid": 177911468982936,
+	"sid": 357227976422673,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,40 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 232,
-						"height": 264,
+						"width": 600,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "C:\\projects\\speech\\bubbles\\resources\\src\\gem\\subgem-off.png",
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\air\\final\\square.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8477886,
+						"imageSpriteId": 5541252,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								0.5,
-								0,
-								1,
-								0,
-								1,
-								0.49242424242424243,
-								1,
-								0.9981060606060606,
-								0.5,
-								0.9962121212121212,
-								0,
-								1,
-								0,
-								0.5643939393939397
+								0.075,
+								0.075,
+								0.9233333333333333,
+								0.075,
+								0.9233333333333333,
+								0.9233333333333333,
+								0.075,
+								0.9233333333333333
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 411126382868784,
-				"name": "Animation 1",
+				"sid": 319971176088138,
+				"name": "static",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

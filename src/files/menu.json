@@ -1,310 +1,327 @@
 {
   "pages": [
     {
-      "page": 1,
-      "sounds": [
+      "columns": [
         {
-          "sound": "l",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ],
-          "blends": [
+          "sounds": [
             {
-              "sound": "bl"
+              "sound": "l",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ],
+              "blends": [
+                {
+                  "sound": "bl"
+                },
+                {
+                  "sound": "fl"
+                },
+                {
+                  "sound": "gl"
+                },
+                {
+                  "sound": "kl"
+                },
+                {
+                  "sound": "pl"
+                },
+                {
+                  "sound": "sl"
+                }
+              ]
             },
             {
-              "sound": "fl"
-            },
-            {
-              "sound": "gl"
-            },
-            {
-              "sound": "kl"
-            },
-            {
-              "sound": "pl"
-            },
-            {
-              "sound": "sl"
+              "sound": "s",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ],
+              "blends": [
+                {
+                  "sound": "st"
+                },
+                {
+                  "sound": "sk"
+                },
+                {
+                  "sound": "sp"
+                },
+                {
+                  "sound": "sw"
+                },
+                {
+                  "sound": "sl"
+                },
+                {
+                  "sound": "sm"
+                },
+                {
+                  "sound": "sn"
+                }
+              ]
             }
           ]
         },
         {
-          "sound": "r",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ],
-          "blends": [
+          "sounds": [
             {
-              "sound": "air",
+              "sound": "r",
               "placement": [
                 "initial",
                 "medial",
                 "final"
+              ],
+              "blends": [
+                {
+                  "sound": "air",
+                  "placement": [
+                    "initial",
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "ar",
+                  "placement": [
+                    "initial",
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "ear",
+                  "placement": [
+                    "initial",
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "ire",
+                  "placement": [
+                    "initial",
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "or",
+                  "placement": [
+                    "initial",
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "er",
+                  "placement": [
+                    "initial",
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "rl",
+                  "placement": [
+                    "medial",
+                    "final"
+                  ]
+                },
+                {
+                  "sound": "br"
+                },
+                {
+                  "sound": "dr"
+                },
+                {
+                  "sound": "fr"
+                },
+                {
+                  "sound": "gr"
+                },
+                {
+                  "sound": "kr"
+                },
+                {
+                  "sound": "tr"
+                },
+                {
+                  "sound": "pr"
+                }
               ]
-            },
-            {
-              "sound": "ar",
-              "placement": [
-                "initial",
-                "medial",
-                "final"
-              ]
-            },
-            {
-              "sound": "ear",
-              "placement": [
-                "initial",
-                "medial",
-                "final"
-              ]
-            },
-            {
-              "sound": "ire",
-              "placement": [
-                "initial",
-                "medial",
-                "final"
-              ]
-            },
-            {
-              "sound": "or",
-              "placement": [
-                "initial",
-                "medial",
-                "final"
-              ]
-            },
-            {
-              "sound": "er",
-              "placement": [
-                "initial",
-                "medial",
-                "final"
-              ]
-            },
-            {
-              "sound": "rl",
-              "placement": [
-                "medial",
-                "final"
-              ]
-            },
-            {
-              "sound": "br"
-            },
-            {
-              "sound": "dr"
-            },
-            {
-              "sound": "fr"
-            },
-            {
-              "sound": "gr"
-            },
-            {
-              "sound": "kr"
-            },
-            {
-              "sound": "tr"
-            },
-            {
-              "sound": "pr"
             }
           ]
         }
       ]
     },
     {
-      "page": 2,
-      "sounds": [
+      "columns": [
         {
-          "sound": "sh",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "th",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ],
-          "placement_strict": [
-            "medial voiced",
-            "medial voiceless"
-          ]
-        },
-        {
-          "sound": "ch",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "j",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "s",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ],
-          "blends": [
+          "sounds": [
             {
-              "sound": "st"
+              "sound": "p",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
             },
             {
-              "sound": "sk"
+              "sound": "b",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
             },
             {
-              "sound": "sp"
+              "sound": "m",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
             },
             {
-              "sound": "sw"
+              "sound": "h",
+              "placement": [
+                "initial"
+              ]
             },
             {
-              "sound": "sl"
+              "sound": "w",
+              "placement": [
+                "initial"
+              ]
             },
             {
-              "sound": "sm"
+              "sound": "y",
+              "placement": [
+                "initial"
+              ]
             },
             {
-              "sound": "sn"
+              "sound": "d",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
             }
           ]
         },
         {
-          "sound": "z",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "k",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
+          "sounds": [
+            {
+              "sound": "n",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "t",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "g",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "ng",
+              "placement": [
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "f",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "v",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "sh",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "page": 3,
-      "sounds": [
+      "columns": [
         {
-          "sound": "p",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "b",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "m",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "h",
-          "placement": [
-            "initial"
-          ]
-        },
-        {
-          "sound": "w",
-          "placement": [
-            "initial"
-          ]
-        },
-        {
-          "sound": "y",
-          "placement": [
-            "initial"
-          ]
-        },
-        {
-          "sound": "d",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "n",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "t",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "g",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "ng",
-          "placement": [
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "f",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
-          ]
-        },
-        {
-          "sound": "v",
-          "placement": [
-            "initial",
-            "medial",
-            "final"
+          "sounds": [
+            {
+              "sound": "th",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ],
+              "placement_strict": [
+                "medial voiced",
+                "medial voiceless"
+              ]
+            },
+            {
+              "sound": "j",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "z",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "k",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            },
+            {
+              "sound": "ch",
+              "placement": [
+                "initial",
+                "medial",
+                "final"
+              ]
+            }
           ]
         }
       ]

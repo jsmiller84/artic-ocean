@@ -15,10 +15,10 @@
 						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "E:\\projects\\speech\\bubbles\\resources\\working\\objects\\st\\strawberry.png",
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\air\\medial\\strawberry.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5099776,
+						"imageSpriteId": 7770707,
 						"collisionPoly": {
 							"points": [
 								0.10833333333333339,

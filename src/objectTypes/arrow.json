@@ -1,0 +1,55 @@
+{
+	"name": "arrow",
+	"plugin-id": "Sprite",
+	"sid": 661576386758285,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\projects\\artic-ocean\\resources\\dist\\objects\\air\\initial\\arrow.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6213528,
+						"collisionPoly": {
+							"points": [
+								0.3783333333333332,
+								0.11666666666666646,
+								0.3900000000000005,
+								0.32000000000000006,
+								0.9716666666666673,
+								0.3266666666666667,
+								0.9733333333333335,
+								0.6233333333333342,
+								0.3833333333333336,
+								0.6216666666666667,
+								0.3766666666666667,
+								0.8316666666666669,
+								0.006666666666666666,
+								0.475
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 220646265470776,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

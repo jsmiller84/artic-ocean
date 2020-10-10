@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 21002,
+	"savedWithRelease": 21800,
 	"name": "Bubbles",
 	"runtime": "c3",
 	"useWorker": "worker",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "AJAX",
 			"name": "AJAX",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Arr",
 			"name": "Array",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -59,15 +59,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
-			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -75,7 +67,7 @@
 			"id": "Persist",
 			"name": "Persist",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -83,7 +75,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -91,7 +83,7 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		},
 		{
@@ -99,7 +91,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r210.2",
+			"version": "r218",
 			"bundled": false
 		}
 	],
@@ -107,7 +99,6 @@
 	"objectTypes": {
 		"items": [
 			"LoadingText",
-			"Text",
 			"Border"
 		],
 		"subfolders": [
@@ -251,6 +242,73 @@
 								],
 								"subfolders": [],
 								"name": "er"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"arrow"
+										],
+										"subfolders": [],
+										"name": "initial"
+									},
+									{
+										"items": [
+											"cherry",
+											"hairbrush",
+											"parachute",
+											"stairs"
+										],
+										"subfolders": [],
+										"name": "medial"
+									},
+									{
+										"items": [
+											"bear",
+											"pear",
+											"square",
+											"wheelchair"
+										],
+										"subfolders": [],
+										"name": "final"
+									}
+								],
+								"name": "air"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"ear",
+											"earring"
+										],
+										"subfolders": [],
+										"name": "initial"
+									},
+									{
+										"items": [
+											"beard",
+											"cereal",
+											"pyramid",
+											"zero"
+										],
+										"subfolders": [],
+										"name": "medial"
+									},
+									{
+										"items": [
+											"chandelier",
+											"cheer",
+											"deer",
+											"year"
+										],
+										"subfolders": [],
+										"name": "final"
+									}
+								],
+								"name": "ear"
 							}
 						],
 						"name": "Objects"
@@ -332,12 +390,12 @@
 					"ItemText",
 					"StartGameText",
 					"Toggle",
-					"SubToggle",
-					"PageUp",
-					"PageDown",
 					"VerticalScroll",
 					"MenuBackground",
-					"SoundBorder"
+					"SoundBorder",
+					"UpText",
+					"DownText",
+					"SelectedText"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -556,7 +614,7 @@
 		"pixelRounding": true,
 		"useLoaderLayout": true,
 		"fullscreenMode": "letterbox-scale",
-		"fullscreenQuality": "high",
+		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -578,7 +636,7 @@
 			0
 		],
 		"useHighDpi": true,
-		"orientations": "landscape",
+		"orientations": "any",
 		"enableWebGL": true,
 		"gpuPreference": "default",
 		"framerateMode": "vsync",
