@@ -2660,6 +2660,42 @@ this._x,this._y)<GESTURE_DOUBLETAP_THRESHOLD){lastTapX=-1E3;lastTapY=-1E3;lastTa
 this._y)[getx?0:1];else return 0}}}};
 
 
+'use strict';{const C3=self.C3;C3.Plugins.Timeline=class TimelinePlugin extends C3.SDKPluginBase{constructor(opts){super(opts)}Release(){super.Release()}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.Timeline.Type=class TimelineType extends C3.SDKTypeBase{constructor(objectClass){super(objectClass)}Release(){super.Release()}OnCreate(){}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.Timeline.Instance=class TimelineInstance extends C3.SDKInstanceBase{constructor(inst,properties){super(inst);this.GetRuntime().GetTimelineManager().SetPluginInstance(inst)}Release(){super.Release()}}};
+
+
+'use strict';{const C3=self.C3;let triggerTimeline=null;let triggerKeyframe=null;C3.Plugins.Timeline.Cnds={SetTriggerTimeline(timeline){triggerTimeline=timeline},GetTriggerTimeline(){return triggerTimeline},SetTriggerKeyframe(keyframe){triggerKeyframe=keyframe},GetTriggerKeyframe(){return triggerKeyframe},OnTimelineStarted(timeline){return triggerTimeline===timeline},OnTimelineStartedByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))if(C3.equalsNoCase(triggerTimeline.GetName(),
+timeline.GetName()))return true;return false},OnTimelineStartedByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))if(timeline.HasTags(triggerTimeline.GetTags()))return true;return false},OnAnyTimelineStarted(){return true},OnTimelineFinished(timeline){return triggerTimeline===timeline},OnTimelineFinishedByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))if(C3.equalsNoCase(triggerTimeline.GetName(),
+timeline.GetName()))return true;return false},OnTimelineFinishedByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))if(timeline.HasTags(triggerTimeline.GetTags()))return true;return false},OnAnyTimelineFinished(){return true},IsPlaying(timeline){return timeline.IsPlaying()},IsPlayingByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))if(timeline.IsPlaying())return true;
+return false},IsPlayingByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))if(timeline.IsPlaying())return true;return false},IsAnyPlaying(){const timelines=[...this._runtime.GetTimelineManager().GetTimelines()];if(!timelines)return;return timelines.some(t=>t.IsPlaying())},IsPaused(timeline){return timeline.IsPaused()},IsPausedByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))if(timeline.IsPaused())return true;
+return false},IsPausedByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))if(timeline.IsPaused())return true;return false},IsAnyPaused(){const timelines=[...this._runtime.GetTimelineManager().GetTimelines()];if(!timelines)return;return timelines.some(t=>t.IsPaused())},OnTimeSet(timeline){return triggerTimeline===timeline},OnTimeSetByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))if(triggerTimeline===
+timeline)return true;return false},OnTimeSetByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))if(triggerTimeline===timeline)return true;return false},OnAnyKeyframeReached(){return!!triggerKeyframe},OnKeyframeReached(tagsStr,match){if(!triggerKeyframe)return false;if(triggerKeyframe.GetTags().length===0||!tagsStr)return false;const tags=tagsStr?tagsStr.split(" "):[];if(match===0){for(const tag of tags)if(triggerKeyframe.HasTag(tag))return true;
+return false}else{for(const tag of tags)if(!triggerKeyframe.HasTag(tag))return false;return true}}}};
+
+
+'use strict';{const C3=self.C3;const nextTimelineObjectClasses=new Map;const set_timeline_instance_objects=(instanceObjects,timeline)=>{for(const instanceObject of instanceObjects)timeline.SetTrackInstance(instanceObject.trackId,instanceObject.instance)};const get_timeline_instance_objects=()=>{const ret=[];for(const [objectClass,obj]of nextTimelineObjectClasses.entries()){const instances=objectClass.GetCurrentSol().GetInstances();const count=obj.trackIds.length;for(let i=0;i<count;i++)if(instances[obj.startIndex+
+i])ret.push({trackId:obj.trackIds[i],instance:instances[obj.startIndex+i]});obj.startIndex+=count}return ret};C3.Plugins.Timeline.Acts={async PlayTimeline(timeline,tags,keepNextTimelineClasses){if(!timeline){if(!keepNextTimelineClasses)nextTimelineObjectClasses.clear();return}const timelineManager=this._runtime.GetTimelineManager();let tl;const playPromises=[];if(nextTimelineObjectClasses.size){let instances=get_timeline_instance_objects();do if(instances.length){tl=timelineManager.GetTimelineOfTemplateForInstances(timeline,
+instances);if(!tl){tl=timelineManager.CreateFromTemplate(timeline);tl.ClearTrackInstances();set_timeline_instance_objects(instances,tl)}tl.SetTags(tags);if(tl.Play())playPromises.push(tl.GetPlayPromise());instances=get_timeline_instance_objects()}while(instances.length)}else{timeline.SetTags(tags);if(timeline.Play())playPromises.push(timeline.GetPlayPromise())}if(!keepNextTimelineClasses)nextTimelineObjectClasses.clear();await Promise.all(playPromises)},async PlayTimelineByName(name,tags){const timelineManager=
+this._runtime.GetTimelineManager();const playPromises=[];for(const timeline of timelineManager.GetTimelinesByName(name))playPromises.push(C3.Plugins.Timeline.Acts.PlayTimeline.call(this,timeline,tags,true));nextTimelineObjectClasses.clear();await Promise.all(playPromises)},async PlayAllTimelines(){const timelineManager=this._runtime.GetTimelineManager();const playPromises=[];for(const tl of timelineManager.GetTimelines())if(tl.Play())playPromises.push(tl.GetPlayPromise());nextTimelineObjectClasses.clear();
+await Promise.all(playPromises)},PauseTimeline(timeline){if(!timeline)return;timeline.Stop()},PauseTimelineByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))C3.Plugins.Timeline.Acts.PauseTimeline.call(this,timeline)},PauseTimelineByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))C3.Plugins.Timeline.Acts.PauseTimeline.call(this,timeline)},
+PauseAllTimelines(){const timelineManager=this._runtime.GetTimelineManager();for(const tl of timelineManager.GetTimelines())tl.Stop()},ResumeTimeline(timeline){if(!timeline)return;timeline.Resume()},ResumeTimelineByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))C3.Plugins.Timeline.Acts.ResumeTimeline.call(this,timeline)},ResumeTimelineByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))C3.Plugins.Timeline.Acts.ResumeTimeline.call(this,
+timeline)},ResumeAllTimelines(){const timelineManager=this._runtime.GetTimelineManager();for(const tl of timelineManager.GetTimelines())tl.Resume()},StopTimeline(timeline){if(!timeline)return;timeline.Reset()},StopTimelineByName(name){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))C3.Plugins.Timeline.Acts.StopTimeline.call(this,timeline)},StopTimelineByTags(tags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))C3.Plugins.Timeline.Acts.StopTimeline.call(this,
+timeline)},StopAllTimelines(){const timelineManager=this._runtime.GetTimelineManager();for(const tl of timelineManager.GetTimelines())tl.Reset()},SetTimelineTime(timeline,timeOrTags){if(!timeline)return;if(C3.IsFiniteNumber(timeOrTags))timeline.SetTime(timeOrTags);else if(C3.IsString(timeOrTags)){const keyframe=timeline.GetKeyframeWithTags(timeOrTags);if(keyframe)timeline.SetTime(keyframe.GetTime());else C3.Plugins.Timeline.Acts.SetTimelineTime.call(this,timeline,Number(timeOrTags))}},SetTimelineTimeByName(name,
+timeOrTags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))C3.Plugins.Timeline.Acts.SetTimelineTime.call(this,timeline,timeOrTags)},SetTimelineTimeByTags(tags,timeOrTags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))C3.Plugins.Timeline.Acts.SetTimelineTime.call(this,timeline,timeOrTags)},SetTimelinePlaybackRate(timeline,rate){if(!timeline)return;timeline.SetPlaybackRate(rate)},
+SetTimelinePlaybackRateByName(name,rate){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(name))C3.Plugins.Timeline.Acts.SetTimelinePlaybackRate.call(this,timeline,rate)},SetTimelinePlaybackRateByTags(tags,rate){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByTags(tags))C3.Plugins.Timeline.Acts.SetTimelinePlaybackRate.call(this,timeline,rate)},SetInstance(objectClass,trackId){if(!nextTimelineObjectClasses.has(objectClass))nextTimelineObjectClasses.set(objectClass,
+{startIndex:0,trackIds:[]});nextTimelineObjectClasses.get(objectClass).trackIds.push(trackId)}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.Timeline.Exps={Time(nameOrTags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(nameOrTags))return timeline.GetTime();for(const timeline of timelineManager.GetTimelinesByTags(nameOrTags))return timeline.GetTime();return 0},TotalTime(nameOrTags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(nameOrTags))return timeline.GetTotalTime();
+for(const timeline of timelineManager.GetTimelinesByTags(nameOrTags))return timeline.GetTotalTime();return 0},Progress(nameOrTags){const timelineManager=this._runtime.GetTimelineManager();for(const timeline of timelineManager.GetTimelinesByName(nameOrTags))return timeline.GetTime()/timeline.GetTotalTime();for(const timeline of timelineManager.GetTimelinesByTags(nameOrTags))return timeline.GetTime()/timeline.GetTotalTime();return 0},KeyframeTags(){const triggerKeyframe=C3.Plugins.Timeline.Cnds.GetTriggerKeyframe();
+if(!triggerKeyframe)return"";return triggerKeyframe.GetTags().join(" ")},TimelineName(){const timeline=C3.Plugins.Timeline.Cnds.GetTriggerTimeline();return timeline?timeline.GetName():""},TimelineTags(){const timeline=C3.Plugins.Timeline.Cnds.GetTriggerTimeline();return timeline?timeline.GetStringTags():""}}};
+
+
 "use strict";
 
 {
@@ -8595,6 +8631,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.AJAX,
 		C3.Plugins.Mouse,
 		C3.Plugins.Touch,
+		C3.Plugins.Timeline,
 		C3.Behaviors.Persist,
 		C3.Plugins.Spriter,
 		C3.Behaviors.Pin,
@@ -8654,6 +8691,11 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Behaviors.Physics.Acts.ApplyImpulse,
+		C3.Plugins.Timeline.Acts.SetInstance,
+		C3.Plugins.Timeline.Acts.PlayTimeline,
+		C3.Plugins.Timeline.Cnds.OnTimelineFinishedByTags,
+		C3.ScriptsInEvents.Main_Event36_Act1,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.System.Cnds.OnLoadFinished,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.AJAX.Acts.RequestFile,
@@ -8789,6 +8831,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{AJAX: 0},
 		{Mouse: 0},
 		{Touch: 0},
+		{Timeline: 0},
 		{Persist: 0},
 		{mainBackground: 0},
 		{rightCoral: 0},
@@ -8835,6 +8878,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{bubbleUID: 0},
 		{objectUID: 0},
 		{objectName: 0},
+		{coinUID: 0},
 		{objectsLeft: 0},
 		{objectCreated: 0},
 		{touchAngle: 0}
@@ -9016,6 +9060,9 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		() => 5,
 		() => "left",
 		() => "right",
+		() => "Timeline",
+		() => "coin",
+		() => "moveCoinToChest",
 		() => "loadPositionData",
 		() => 200,
 		p => {
@@ -9062,6 +9109,11 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		async Main_Event27_Act1(runtime, localVars)
 		{
 			main__object_tapped()
+		},
+
+		async Main_Event36_Act1(runtime, localVars)
+		{
+			main__coinFinished();
 		},
 
 		async Menu_Event2_Act1(runtime, localVars)
@@ -9122,6 +9174,10 @@ class Main {
 	this.bubbleList = [];
 	this.createdObjectList = [];
 	this.newBubble = null;
+	
+	this.coinList = [];
+	this.intervalID = null;
+	this.coinsGenerated = 0;
 	
 	this.runtime.addEventListener("beforeprojectstart", () => this.onBeforeProjectStart());
   }
@@ -9203,6 +9259,7 @@ class Main {
 	  }
 	  this.objectsInitialized = true;
 	} else {
+	  await this.startCoinAnimation();
       for(let ndx = 0; ndx < this.bubbleList.length; ++ndx) {
         const bubble = this.bubbleList[ndx];
 		if(bubble != null && bubble.uid > 0) {
@@ -9232,6 +9289,37 @@ class Main {
 	  }
 	}
     await this.runtime.callFunction("initCrabPosition");
+  }
+  
+  async startCoinAnimation() {
+    this.intervalID = setInterval(this.processCoinAnimation.bind(this), 450);
+  }
+  
+  async processCoinAnimation() {
+    if(this.coinsGenerated < 5) {
+      const coin = await this.runtime.objects.coin.createInstance(0, -95, -40);
+	  this.coinList.push(coin);
+	  this.coinsGenerated++;
+	  await this.runtime.callFunction("startCoinToChest", coin.uid);
+	
+	  if(this.coinsGenerated === 2) {
+	    await this.runtime.callFunction("openChest");
+	  }
+	}
+	else {
+	  clearInterval(this.intervalID);
+	}
+  }
+  
+  async coinFinished() {
+    if(this.coinList.length) {
+	  this.coinList[0].destroy();
+	  this.coinList.splice(0, 1);
+	}
+	if(this.coinList.length === 0) {
+	  this.coinsGenerated = 0;
+	  await this.runtime.callFunction("closeChest");
+	}
   }
   
   async bubbleTapped(bubble) {
@@ -9281,6 +9369,10 @@ class Main {
   globalThis.main__object_tapped = async () => {
     main.userCanPop = true;
   }  
+  
+  globalThis.main__coinFinished = async() => {
+    await main.coinFinished();
+  }
 })()
 
 	

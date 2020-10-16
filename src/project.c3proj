@@ -40,6 +40,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Spriter",
 			"name": "Scml",
 			"author": "BrashMonkey",
@@ -317,7 +325,8 @@
 						"items": [
 							"AJAX",
 							"Mouse",
-							"Touch"
+							"Touch",
+							"Timeline"
 						],
 						"subfolders": [],
 						"name": "System"
@@ -592,7 +601,10 @@
 		}
 	},
 	"timelines": {
-		"items": [],
+		"items": [
+			"coinToChest",
+			"rotateSign"
+		],
 		"subfolders": [
 			{
 				"items": [],

@@ -311,7 +311,7 @@
 					},
 					"world": {
 						"x": 1920,
-						"y": -192,
+						"y": -96,
 						"width": 4736,
 						"height": 384,
 						"originX": 0.5,
@@ -599,6 +599,35 @@
 							1
 						],
 						"angle": 0
+					}
+				},
+				{
+					"type": "coin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "static",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -95,
+						"y": -40,
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

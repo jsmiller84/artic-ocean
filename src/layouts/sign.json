@@ -72,7 +72,7 @@
 					"properties": {
 						"text": "...",
 						"enable-bbcode": true,
-						"font": "Impact",
+						"font": "sofiapro-bold",
 						"size": 144,
 						"line-height": 0,
 						"bold": false,

@@ -20,6 +20,10 @@ class Main {
 	this.createdObjectList = [];
 	this.newBubble = null;
 	
+	this.coinList = [];
+	this.intervalID = null;
+	this.coinsGenerated = 0;
+	
 	this.runtime.addEventListener("beforeprojectstart", () => this.onBeforeProjectStart());
   }
   
@@ -100,6 +104,7 @@ class Main {
 	  }
 	  this.objectsInitialized = true;
 	} else {
+	  await this.startCoinAnimation();
       for(let ndx = 0; ndx < this.bubbleList.length; ++ndx) {
         const bubble = this.bubbleList[ndx];
 		if(bubble != null && bubble.uid > 0) {
@@ -129,6 +134,37 @@ class Main {
 	  }
 	}
     await this.runtime.callFunction("initCrabPosition");
+  }
+  
+  async startCoinAnimation() {
+    this.intervalID = setInterval(this.processCoinAnimation.bind(this), 450);
+  }
+  
+  async processCoinAnimation() {
+    if(this.coinsGenerated < 5) {
+      const coin = await this.runtime.objects.coin.createInstance(0, -95, -40);
+	  this.coinList.push(coin);
+	  this.coinsGenerated++;
+	  await this.runtime.callFunction("startCoinToChest", coin.uid);
+	
+	  if(this.coinsGenerated === 2) {
+	    await this.runtime.callFunction("openChest");
+	  }
+	}
+	else {
+	  clearInterval(this.intervalID);
+	}
+  }
+  
+  async coinFinished() {
+    if(this.coinList.length) {
+	  this.coinList[0].destroy();
+	  this.coinList.splice(0, 1);
+	}
+	if(this.coinList.length === 0) {
+	  this.coinsGenerated = 0;
+	  await this.runtime.callFunction("closeChest");
+	}
   }
   
   async bubbleTapped(bubble) {
@@ -178,6 +214,10 @@ class Main {
   globalThis.main__object_tapped = async () => {
     main.userCanPop = true;
   }  
+  
+  globalThis.main__coinFinished = async() => {
+    await main.coinFinished();
+  }
 })()
 
 	

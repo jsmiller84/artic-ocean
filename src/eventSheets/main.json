@@ -1103,6 +1103,126 @@
 				}
 			],
 			"sid": 517872637331627
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Timeline",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "startCoinToChest",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "coinUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 360264939698529
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "coin",
+							"sid": 779150330000942,
+							"parameters": {
+								"unique-id": "coinUID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instance",
+							"objectClass": "Timeline",
+							"sid": 693359297808084,
+							"parameters": {
+								"object-class": "coin",
+								"track-id": "\"coin\""
+							}
+						},
+						{
+							"id": "play-timeline",
+							"objectClass": "Timeline",
+							"sid": 122218936369566,
+							"parameters": {
+								"timeline": "coinToChest",
+								"tags": "\"moveCoinToChest\""
+							}
+						}
+					],
+					"sid": 165879240495244
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timeline-finished-by-tags",
+							"objectClass": "Timeline",
+							"sid": 207790588871580,
+							"parameters": {
+								"tags": "\"moveCoinToChest\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "main__coinFinished();"
+						}
+					],
+					"sid": 809963504088359
+				},
+				{
+					"functionName": "openChest",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "chestclosed",
+							"sid": 874855583746800,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 467925823699051
+				},
+				{
+					"functionName": "closeChest",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "chestclosed",
+							"sid": 573350762728357,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 681562253497782
+				}
+			],
+			"sid": 172132915785160
 		}
 	],
 	"sid": 925493614756591
