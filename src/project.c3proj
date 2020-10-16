@@ -48,16 +48,16 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Arr",
-			"name": "Array",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Text",
-			"name": "Text",
+			"id": "Arr",
+			"name": "Array",
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
@@ -335,10 +335,7 @@
 				"name": "Common"
 			},
 			{
-				"items": [
-					"ObjectSpawnArray",
-					"BubblePositions"
-				],
+				"items": [],
 				"subfolders": [
 					{
 						"items": [
@@ -390,7 +387,6 @@
 					"ItemText",
 					"StartGameText",
 					"Toggle",
-					"VerticalScroll",
 					"MenuBackground",
 					"SoundBorder",
 					"UpText",

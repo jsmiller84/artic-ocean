@@ -73,7 +73,8 @@ class Main {
 	    bubble.destroy();
 	  });
 
-      for(let ndx = 0; ndx < this.initialBubblePositions.length && ndx < this.objectsList.length; ++ndx) {
+      const objectListLength = this.objectsList.length;
+      for(let ndx = 0; ndx < this.initialBubblePositions.length && ndx < objectListLength; ++ndx) {
         const x = this.initialBubblePositions[ndx][0];
         const y = this.initialBubblePositions[ndx][1];
 	    const bubble = await this.runtime.objects.Bubble.createInstance(0, x, y);

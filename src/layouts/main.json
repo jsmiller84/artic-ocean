@@ -630,26 +630,6 @@
 	"sid": 465288551909756,
 	"nonworld-instances": [
 		{
-			"type": "BubblePositions",
-			"properties": {
-				"width": 10,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 5,
-			"instanceVariables": {}
-		},
-		{
-			"type": "ObjectSpawnArray",
-			"properties": {
-				"width": 10,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 7,
-			"instanceVariables": {}
-		},
-		{
 			"type": "GuessPositionArray",
 			"properties": {
 				"width": 10,
