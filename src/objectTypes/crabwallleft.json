@@ -1,7 +1,7 @@
 {
-	"name": "crabWallRight",
+	"name": "crabWallLeft",
 	"plugin-id": "Sprite",
-	"sid": 381664194565946,
+	"sid": 214745161596454,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6635810,
+						"imageSpriteId": 23,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 531589106882829,
+				"sid": 827117993164861,
 				"name": "static",
 				"isLooping": false,
 				"isPingPong": false,

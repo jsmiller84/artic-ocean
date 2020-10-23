@@ -50,6 +50,21 @@
 				{
 					"type": "script",
 					"script": "menu__init();"
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "StartGameText",
+					"sid": 106813981084554,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "objectSign",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
 				}
 			],
 			"sid": 578759931432696

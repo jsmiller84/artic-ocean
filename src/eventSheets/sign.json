@@ -258,6 +258,15 @@
 						"variable": "objectsLeft",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-instance",
+					"objectClass": "Timeline",
+					"sid": 495115977911720,
+					"parameters": {
+						"object-class": "coin",
+						"track-id": "\"coin\""
+					}
 				}
 			],
 			"sid": 698103347371630,
@@ -276,25 +285,364 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 959017601846962,
+					"children": [
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 549081801274433,
-							"parameters": {
-								"seconds": "0.5"
-							}
-						},
-						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 887433360325114,
-							"parameters": {
-								"layout": "\"Main\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 940351151981225,
+									"parameters": {
+										"object": "coin"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "chestclosed",
+									"sid": 774781884335016,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 842009012006439,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nth-instance",
+											"objectClass": "System",
+											"sid": 865131695547483,
+											"parameters": {
+												"object": "coin",
+												"instance": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 154848941434328,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "position",
+												"end-x": "chestclosed.X",
+												"end-y": "chestclosed.Y - 50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 851217040718846,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "size",
+												"end-x": "50",
+												"end-y": "50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "yes",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 719878823974682
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nth-instance",
+											"objectClass": "System",
+											"sid": 886213320967444,
+											"parameters": {
+												"object": "coin",
+												"instance": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 104890317022482,
+											"parameters": {
+												"seconds": "0.3"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 628169103832086,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "position",
+												"end-x": "chestclosed.X",
+												"end-y": "chestclosed.Y - 50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 472816720975899,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "size",
+												"end-x": "50",
+												"end-y": "50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "yes",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 658696877629874
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nth-instance",
+											"objectClass": "System",
+											"sid": 113462254844191,
+											"parameters": {
+												"object": "coin",
+												"instance": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 127940640483365,
+											"parameters": {
+												"seconds": "0.6"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 813670050707920,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "position",
+												"end-x": "chestclosed.X",
+												"end-y": "chestclosed.Y - 50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 761039139323742,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "size",
+												"end-x": "50",
+												"end-y": "50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "yes",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 755946368342476
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nth-instance",
+											"objectClass": "System",
+											"sid": 257586033546261,
+											"parameters": {
+												"object": "coin",
+												"instance": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 598545220651805,
+											"parameters": {
+												"seconds": "1.2"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 474016269888627,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "position",
+												"end-x": "chestclosed.X",
+												"end-y": "chestclosed.Y - 50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 456633397167973,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "size",
+												"end-x": "50",
+												"end-y": "50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "yes",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 798495909510651
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nth-instance",
+											"objectClass": "System",
+											"sid": 631138164846558,
+											"parameters": {
+												"object": "coin",
+												"instance": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 704405077778832,
+											"parameters": {
+												"seconds": "1.8"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 214339950197719,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "position",
+												"end-x": "chestclosed.X",
+												"end-y": "chestclosed.Y - 50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "coin",
+											"sid": 104436806574071,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "size",
+												"end-x": "50",
+												"end-y": "50",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "yes",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 128064148327884,
+											"parameters": {
+												"seconds": "1"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "chestclosed",
+											"sid": 769332023326710,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 481380379200463,
+											"parameters": {
+												"seconds": "0.5"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 739262633602172,
+											"parameters": {
+												"variable": "score",
+												"value": "5"
+											}
+										},
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 673809193882179,
+											"parameters": {
+												"layout": "\"Main\""
+											}
+										}
+									],
+									"sid": 539739193550410
+								}
+							]
 						}
-					],
-					"sid": 959017601846962
+					]
 				}
 			]
 		}

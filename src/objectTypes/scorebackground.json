@@ -1,7 +1,7 @@
 {
-	"name": "crabWallRight",
+	"name": "ScoreBackground",
 	"plugin-id": "Sprite",
-	"sid": 381664194565946,
+	"sid": 710592569428331,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 3840,
+						"height": 252,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6635810,
+						"imageSpriteId": 9883906,
+						"collisionPoly": {
+							"points": [
+								0.003968253968253968,
+								0.003968253968253968,
+								0.996031746031746,
+								0.003968253968253968,
+								0.996031746031746,
+								0.996031746031746,
+								0.003968253968253968,
+								0.996031746031746
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 531589106882829,
-				"name": "static",
+				"sid": 277274400193925,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

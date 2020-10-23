@@ -80,6 +80,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -101,13 +109,23 @@
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
 		}
 	],
 	"uniqueId": "i621ntkgzj5",
 	"objectTypes": {
 		"items": [
 			"LoadingText",
-			"Border"
+			"Border",
+			"ScoreBackground",
+			"ScoreText"
 		],
 		"subfolders": [
 			{
@@ -358,6 +376,7 @@
 						"items": [
 							"borderBoundary",
 							"floorBottom",
+							"crabWallLeft",
 							"crabWallRight"
 						],
 						"subfolders": [],
@@ -552,13 +571,7 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [
-				{
-					"name": "crab.scon",
-					"type": "application/json",
-					"sid": 492196168106380
-				}
-			],
+			"items": [],
 			"subfolders": [
 				{
 					"items": [
@@ -602,7 +615,6 @@
 	},
 	"timelines": {
 		"items": [
-			"coinToChest",
 			"rotateSign"
 		],
 		"subfolders": [

@@ -23,7 +23,13 @@
 			"sid": 313458852525540
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 640210561197910
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -37,8 +43,15 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 22,
+						"imageSpriteId": 4947367,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "pinLoc",
+								"x": 1,
+								"y": 0
+							}
+						],
 						"duration": 1
 					}
 				],

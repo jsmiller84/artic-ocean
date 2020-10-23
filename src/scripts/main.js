@@ -104,7 +104,6 @@ class Main {
 	  }
 	  this.objectsInitialized = true;
 	} else {
-	  await this.startCoinAnimation();
       for(let ndx = 0; ndx < this.bubbleList.length; ++ndx) {
         const bubble = this.bubbleList[ndx];
 		if(bubble != null && bubble.uid > 0) {
@@ -135,38 +134,7 @@ class Main {
 	}
     await this.runtime.callFunction("initCrabPosition");
   }
-  
-  async startCoinAnimation() {
-    this.intervalID = setInterval(this.processCoinAnimation.bind(this), 450);
-  }
-  
-  async processCoinAnimation() {
-    if(this.coinsGenerated < 5) {
-      const coin = await this.runtime.objects.coin.createInstance(0, -95, -40);
-	  this.coinList.push(coin);
-	  this.coinsGenerated++;
-	  await this.runtime.callFunction("startCoinToChest", coin.uid);
-	
-	  if(this.coinsGenerated === 2) {
-	    await this.runtime.callFunction("openChest");
-	  }
-	}
-	else {
-	  clearInterval(this.intervalID);
-	}
-  }
-  
-  async coinFinished() {
-    if(this.coinList.length) {
-	  this.coinList[0].destroy();
-	  this.coinList.splice(0, 1);
-	}
-	if(this.coinList.length === 0) {
-	  this.coinsGenerated = 0;
-	  await this.runtime.callFunction("closeChest");
-	}
-  }
-  
+    
   async bubbleTapped(bubble) {
     if(this.userCanPop) {
       this.userCanPop = false;
@@ -179,6 +147,90 @@ class Main {
 	} else {
        //flash object in crabs hand
 	}
+  }
+  
+  async launchCrab() {
+  
+  }
+  
+  /**
+   * Return the firing solution for a projectile starting at 'src' with
+   * velocity 'v', to hit a target, 'dst'.
+   *
+   * @param Object src position of shooter
+   * @param Object dst position & velocity of target
+   * @param Number v   speed of projectile
+   * @return Object Coordinate at which to fire (and where intercept occurs)
+   *
+   * E.g.
+   * >>> intercept({x:2, y:4}, {x:5, y:7, vx: 2, vy:1}, 5)
+   * = {x: 8, y: 8.5}
+   */
+  //src is the position of the crab
+  //dst = position and velocity of the falling object
+  async intercept(src, dst, v) {
+    let dstLoc = dst.getImagePoint("crabloc");
+    let diffX = (src.x - dstLoc[0]);
+	let diffY = (src.y - (dstLoc[1] + 600));
+	let speed = Math.sqrt((diffX*diffX) + (diffY*diffY));
+   
+     await this.runtime.callFunction("fireCrab", speed, dst.uid);
+
+	/*
+    var tx = dst.x - src.x,
+        ty = Math.abs(dst.y - src.y),
+        tvx = dst.behaviors.Physics.getVelocityX(), //there is no x velocity since the object is falling straight down
+        tvy = -(dst.behaviors.Physics.getVelocityY());
+
+    // Get quadratic equation components
+    var a = tvx*tvx + tvy*tvy - v*v;
+    var b = 2 * (tvx * tx + tvy * ty);
+    var c = tx*tx + ty*ty;    
+ 
+    // Solve quadratic
+    var ts = this.quad(a, b, c); // See quad(), below
+
+    // Find smallest positive solution
+    var sol = null;
+    if (ts) {
+      var t0 = ts[0], t1 = ts[1];
+      var t = Math.min(t0, t1);
+      if (t < 0) t = Math.max(t0, t1);    
+      if (t > 0) {
+        sol = {
+          x: dst.x + 100*t,
+          y: dst.y + 100*t
+        };
+      }
+    }
+	if(sol !== null) {
+	  await this.runtime.callFunction("fireCrab", sol.x, sol.y);
+	}
+    return sol;*/
+  }
+
+
+  /**
+   * Return solutions for quadratic
+   */
+  
+  quad(a,b,c) {
+    var sol = null;
+    if (Math.abs(a) < 1e-6) {
+      if (Math.abs(b) < 1e-6) {
+        sol = Math.abs(c) < 1e-6 ? [0,0] : null;
+      } else {
+        sol = [-c/b, -c/b];
+      }
+    } else {
+      var disc = b*b - 4*a*c;
+      if (disc >= 0) {
+        disc = Math.sqrt(disc);
+        a = 2*a;
+        sol = [(-b-disc)/a, (-b+disc)/a];
+      }
+    }
+    return sol;
   }
   
   tick() {
@@ -217,6 +269,9 @@ class Main {
   
   globalThis.main__coinFinished = async() => {
     await main.coinFinished();
+  }
+  globalThis.main__setup_projectile = async(objectFamily, crab) => {
+    let pos = main.intercept(crab, objectFamily, 400);
   }
 })()
 
