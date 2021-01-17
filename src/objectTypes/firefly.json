@@ -1,0 +1,61 @@
+{
+	"name": "firefly",
+	"plugin-id": "Sprite",
+	"sid": 672453246649011,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "F:\\projects\\artic-ocean-tsc\\artic-ocean\\resources\\dist\\objects\\ire\\medial\\firefly.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6705974,
+						"collisionPoly": {
+							"points": [
+								0.14999999999999997,
+								0.13999999999999996,
+								0.485,
+								0.033333333333333354,
+								0.7941666666666666,
+								0.20083333333333328,
+								0.9149999999999999,
+								0.39999999999999997,
+								0.9716666666666665,
+								0.6150000000000001,
+								0.6233333333333335,
+								0.8550000000000002,
+								0.45833333333333337,
+								0.99,
+								0.22666666666666666,
+								0.9949999999999999,
+								0.0725,
+								0.8366666666666668,
+								0.0016666666666666663,
+								0.2583333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 408431382697836,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

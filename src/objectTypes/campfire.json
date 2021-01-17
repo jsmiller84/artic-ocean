@@ -1,0 +1,61 @@
+{
+	"name": "campfire",
+	"plugin-id": "Sprite",
+	"sid": 311387288868451,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "F:\\projects\\artic-ocean-tsc\\artic-ocean\\resources\\dist\\objects\\ire\\final\\campfire.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1134223,
+						"collisionPoly": {
+							"points": [
+								0.285,
+								0.19666666666666655,
+								0.4966666666666667,
+								0,
+								0.743333333333333,
+								0.17166666666666672,
+								0.8216666666666669,
+								0.4816666666666667,
+								0.9700000000000002,
+								0.8266666666666665,
+								0.8733333333333338,
+								0.9708333333333333,
+								0.5,
+								0.9883333333333333,
+								0.10583333333333332,
+								0.953333333333333,
+								0.02,
+								0.8266666666666663,
+								0.18666666666666668,
+								0.4483333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 494018739778667,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

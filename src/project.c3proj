@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 21800,
+	"savedWithRelease": 22500,
 	"name": "Bubbles",
 	"runtime": "c3",
 	"useWorker": "worker",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "AJAX",
 			"name": "AJAX",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Timeline",
 			"name": "Timeline",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,7 @@
 			"id": "Arr",
 			"name": "Array",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "Persist",
 			"name": "Persist",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -83,7 +83,7 @@
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -91,7 +91,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -99,7 +99,7 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -107,7 +107,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		},
 		{
@@ -115,7 +115,7 @@
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
-			"version": "r218",
+			"version": "r225",
 			"bundled": false
 		}
 	],
@@ -335,6 +335,53 @@
 									}
 								],
 								"name": "ear"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"iron"
+										],
+										"subfolders": [],
+										"name": "initial"
+									},
+									{
+										"items": [
+											"firefly",
+											"pliers",
+											"siren",
+											"tired"
+										],
+										"subfolders": [],
+										"name": "medial"
+									},
+									{
+										"items": [
+											"campfire",
+											"sapphire",
+											"tire",
+											"vampire",
+											"wire"
+										],
+										"subfolders": [],
+										"name": "final"
+									}
+								],
+								"name": "ire"
+							},
+							{
+								"items": [
+									"fairy",
+									"fan",
+									"feather",
+									"five",
+									"foot",
+									"fox",
+									"phone"
+								],
+								"subfolders": [],
+								"name": "f"
 							}
 						],
 						"name": "Objects"

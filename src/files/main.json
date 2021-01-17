@@ -9,7 +9,7 @@
 	],
 	"objectMap": {
 		"k": { 
-		    "initial": ["cake", "candy", "car", "cow", "cup", "cut", "key", "kick", "kiss", "cat", "fork"],
+		    "initial": ["cake", "candy", "car", "cow", "cup", "cut", "key", "kick", "kiss", "cat", "fork", "campfire"],
 			"medial": [],
 			"final": ["bike", "book", "duck", "fork", "hawk", "kick", "lick", "milk", "pink", "rake", "rock", "sock"]
 		},
@@ -23,7 +23,7 @@
 		  "medial": [],
 		  "final": []
 		},
-		"p": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
+		"p": ["pliers", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"l": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"bl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"fl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
@@ -46,7 +46,11 @@
 		  "medial": ["beard", "cereal", "pyramid", "zero"],
 		  "final": ["chandelier", "cheer", "deer", "ear", "year"]
 		},
-		"ire": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
+		"ire": {
+		  "initial": ["iron"],
+		  "medial": ["firefly", "pliers", "siren", "tired"],
+		  "final": ["campfire", "sapphire", "tire", "vampire", "wire"]
+		},
 		"or": {
 		  "initial": ["orange"],
 		  "medial": ["forest", "horse", "north", "popcorn", "shorts", "surfboard", "tornado"],
@@ -57,6 +61,7 @@
 		  "medial": ["bird", "fern", "girl", "purse"],
 		  "final": ["butter", "flower", "hammer", "letter", "spider", "zipper"]
 		},
+		"f": ["fairy", "fan", "feather", "fish", "five", "foot", "fork", "fox", "frog", "phone"],
 		"rl": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"br": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"dr": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
@@ -68,7 +73,7 @@
 		"th": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"ch": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"j": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
-		"s": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
+		"s": ["siren", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"sk": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"sp": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],
 		"sw": ["fish", "fork", "frog", "lemon", "money", "snail", "swan"],

@@ -1,0 +1,65 @@
+{
+	"name": "pliers",
+	"plugin-id": "Sprite",
+	"sid": 994130469380507,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "F:\\projects\\artic-ocean-tsc\\artic-ocean\\resources\\dist\\objects\\ire\\medial\\pliers.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2613719,
+						"collisionPoly": {
+							"points": [
+								0.05166666666666666,
+								0.4733333333333332,
+								0.7158333333333334,
+								0.03645833333333338,
+								0.9183333333333336,
+								0.009583333333333392,
+								1,
+								0.14916666666666678,
+								0.9216666666666667,
+								0.31833333333333336,
+								0.7316666666666666,
+								0.39999999999999997,
+								0.6466666666666666,
+								0.7600000000000005,
+								0.29000000000000004,
+								0.961666666666667,
+								0.20833333333333337,
+								0.9000000000000004,
+								0.5633333333333337,
+								0.3916666666666669,
+								0.05166666666666663,
+								0.7116666666666666,
+								0,
+								0.6683333333333336
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 728608378761300,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
