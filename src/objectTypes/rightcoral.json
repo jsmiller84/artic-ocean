@@ -2,15 +2,9 @@
 	"name": "rightCoral",
 	"plugin-id": "Sprite",
 	"sid": 972316744426375,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 233051626969626
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

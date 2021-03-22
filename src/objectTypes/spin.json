@@ -1,0 +1,63 @@
+{
+	"name": "spin",
+	"plugin-id": "Sprite",
+	"sid": 743579381915992,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4082029,
+						"collisionPoly": {
+							"points": [
+								0.24999999999999994,
+								0.04999999999999995,
+								0.45833333333333354,
+								0.3433333333333334,
+								0.7599999999999999,
+								0.28000000000000014,
+								1,
+								0.4133333333333334,
+								0.9866666666666668,
+								0.6683333333333328,
+								0.6816666666666672,
+								0.9416666666666669,
+								0.14833333333333326,
+								0.9666666666666669,
+								0.013333333333333334,
+								0.8883333333333332,
+								0.08833333333333342,
+								0.6091666666666664,
+								0.2708333333333333,
+								0.4145833333333332,
+								0.17374999999999996,
+								0.10395833333333317
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 521254516881105,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

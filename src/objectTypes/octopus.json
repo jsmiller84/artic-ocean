@@ -1,0 +1,63 @@
+{
+	"name": "octopus",
+	"plugin-id": "Sprite",
+	"sid": 948784606459209,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2421500,
+						"collisionPoly": {
+							"points": [
+								0.21,
+								0.31500000000000006,
+								0.5200000000000001,
+								0.22499999999999995,
+								0.6349999999999997,
+								0.2433333333333334,
+								0.8316666666666663,
+								0.29666666666666675,
+								1,
+								0.44083333333333324,
+								0.9625000000000004,
+								0.5479166666666668,
+								0.840416666666667,
+								0.6881250000000003,
+								0.6600000000000003,
+								0.6816666666666671,
+								0.40833333333333355,
+								0.776666666666667,
+								3.903127820947816e-18,
+								0.5850000000000005,
+								0.1558333333333333,
+								0.39333333333333387
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 547681026140392,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

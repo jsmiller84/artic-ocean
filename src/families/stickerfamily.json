@@ -1,0 +1,31 @@
+{
+	"name": "stickerFamily",
+	"plugin-id": "Sprite",
+	"sid": 799387520326892,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 334395051272976
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 480996756495081
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"angelfish",
+		"clownfish",
+		"jellyfish",
+		"tigershark",
+		"seaturtle",
+		"orca",
+		"narwhal",
+		"dolphin",
+		"octopus",
+		"seahorse"
+	]
+}

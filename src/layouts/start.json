@@ -49,11 +49,7 @@
 					},
 					"uid": 20,
 					"instanceVariables": {},
-					"behaviors": {
-						"Persist": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 0,
 						"y": 0,
@@ -82,11 +78,7 @@
 					},
 					"uid": 21,
 					"instanceVariables": {},
-					"behaviors": {
-						"Persist": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 514,
 						"y": 304,

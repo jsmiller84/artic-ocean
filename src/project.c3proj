@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 22500,
+	"savedWithRelease": 23404,
 	"name": "Bubbles",
 	"runtime": "c3",
 	"useWorker": "worker",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "AJAX",
 			"name": "AJAX",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Timeline",
 			"name": "Timeline",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Spriter",
 			"name": "Scml",
 			"author": "BrashMonkey",
-			"version": "3-8-2020",
+			"version": "9-28-2020",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,15 @@
 			"id": "Arr",
 			"name": "Array",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -75,7 +83,7 @@
 			"id": "Persist",
 			"name": "Persist",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -83,7 +91,7 @@
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -91,7 +99,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -99,7 +107,7 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -107,7 +115,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
 			"bundled": false
 		},
 		{
@@ -115,7 +123,15 @@
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
-			"version": "r225",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"version": "r234.4",
 			"bundled": false
 		}
 	],
@@ -125,7 +141,11 @@
 			"LoadingText",
 			"Border",
 			"ScoreBackground",
-			"ScoreText"
+			"ScoreText",
+			"Button",
+			"StoreText",
+			"CostText",
+			"Text"
 		],
 		"subfolders": [
 			{
@@ -141,11 +161,7 @@
 						],
 						"subfolders": [
 							{
-								"items": [
-									"shamrock",
-									"shout",
-									"fish"
-								],
+								"items": [],
 								"subfolders": [
 									{
 										"items": [
@@ -160,10 +176,25 @@
 											"shoe",
 											"shot",
 											"shovel",
-											"shower"
+											"shower",
+											"fish"
 										],
 										"subfolders": [],
 										"name": "initial"
+									},
+									{
+										"items": [
+											"blush",
+											"brush",
+											"bush",
+											"dish",
+											"leash",
+											"radish",
+											"splash",
+											"trash"
+										],
+										"subfolders": [],
+										"name": "final"
 									}
 								],
 								"name": "sh"
@@ -382,6 +413,25 @@
 								],
 								"subfolders": [],
 								"name": "f"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"space",
+											"spatula",
+											"spill",
+											"spin",
+											"spoon",
+											"spot",
+											"spout"
+										],
+										"subfolders": [],
+										"name": "initial"
+									}
+								],
+								"name": "sp"
 							}
 						],
 						"name": "Objects"
@@ -452,7 +502,9 @@
 					"coin",
 					"objectSign",
 					"SignText",
-					"GuessPositionArray"
+					"GuessPositionArray",
+					"buttonSign",
+					"woodButton"
 				],
 				"subfolders": [],
 				"name": "Sign"
@@ -470,23 +522,38 @@
 				],
 				"subfolders": [],
 				"name": "Menu"
+			},
+			{
+				"items": [
+					"clownfish",
+					"dolphin",
+					"angelfish",
+					"jellyfish",
+					"narwhal",
+					"octopus",
+					"orca",
+					"seaturtle",
+					"tigershark",
+					"seahorse"
+				],
+				"subfolders": [],
+				"name": "Stickers"
+			},
+			{
+				"items": [
+					"store"
+				],
+				"subfolders": [],
+				"name": "Store"
 			}
 		]
 	},
 	"autosaveData": null,
-	"containers": [
-		{
-			"members": [
-				"leftCoral",
-				"mainBackground",
-				"rightCoral"
-			],
-			"selectMode": "normal"
-		}
-	],
+	"containers": [],
 	"families": {
 		"items": [
-			"objectFamily"
+			"objectFamily",
+			"stickerFamily"
 		],
 		"subfolders": []
 	},
@@ -495,7 +562,8 @@
 			"Main",
 			"Start",
 			"Sign",
-			"Menu"
+			"Menu",
+			"Store"
 		],
 		"subfolders": []
 	},
@@ -504,7 +572,8 @@
 			"Main",
 			"Start",
 			"Sign",
-			"Menu"
+			"Menu",
+			"Store"
 		],
 		"subfolders": []
 	},
@@ -514,12 +583,10 @@
 				{
 					"name": "Main.js",
 					"type": "application/javascript",
-					"sid": 375075712887125
-				},
-				{
-					"name": "Menu.js",
-					"type": "application/javascript",
-					"sid": 535432860860697
+					"sid": 375075712887125,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -636,6 +703,11 @@
 							"name": "Menu.json",
 							"type": "application/json",
 							"sid": 259794665628498
+						},
+						{
+							"name": "Store.json",
+							"type": "application/json",
+							"sid": 942955470542101
 						}
 					],
 					"subfolders": [],
@@ -706,6 +778,7 @@
 		"orientations": "any",
 		"enableWebGL": true,
 		"gpuPreference": "default",
+		"scriptsType": "classic",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
 		"sampling": "trilinear",

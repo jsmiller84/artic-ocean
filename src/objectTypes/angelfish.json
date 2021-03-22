@@ -1,0 +1,65 @@
+{
+	"name": "angelfish",
+	"plugin-id": "Sprite",
+	"sid": 808461568793396,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2738867,
+						"collisionPoly": {
+							"points": [
+								0.1249999999999999,
+								0.22333333333333336,
+								0.24166666666666667,
+								0.13166666666666668,
+								0.5116666666666662,
+								0.12000000000000001,
+								0.8083333333333322,
+								0.21666666666666679,
+								1,
+								0.41916666666666674,
+								1,
+								0.5487500000000005,
+								0.8266666666666671,
+								0.716666666666666,
+								0.59,
+								0.8699999999999997,
+								0.46416666666666623,
+								0.8800000000000008,
+								0.1749999999999999,
+								0.8100000000000003,
+								0,
+								0.575,
+								0,
+								0.39916666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 139685556785881,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

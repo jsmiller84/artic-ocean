@@ -73,16 +73,6 @@
 							"script": "main__init();"
 						},
 						{
-							"id": "move-to-top",
-							"objectClass": "rightCoral",
-							"sid": 137899873904981
-						},
-						{
-							"id": "move-to-top",
-							"objectClass": "leftCoral",
-							"sid": 475753686942221
-						},
-						{
 							"id": "set-text",
 							"objectClass": "ScoreText",
 							"sid": 970844205598492,
@@ -140,6 +130,16 @@
 							"id": "pauseanimation5",
 							"objectClass": "crabsheet",
 							"sid": 294846972681028
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "crab",
+							"sid": 178025605967826
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "crabsheet",
+							"sid": 891089382091945
 						}
 					],
 					"sid": 225505619792206
@@ -1116,6 +1116,30 @@
 					],
 					"actions": [],
 					"sid": 351751351429236
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 267325617230991,
+							"parameters": {
+								"object": "woodButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 344105353650965,
+							"parameters": {
+								"layout": "\"Store\""
+							}
+						}
+					],
+					"sid": 244980882376706
 				}
 			],
 			"sid": 303686645168349

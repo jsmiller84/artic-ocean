@@ -1,0 +1,57 @@
+{
+	"name": "spill",
+	"plugin-id": "Sprite",
+	"sid": 552336621531338,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8305976,
+						"collisionPoly": {
+							"points": [
+								0.03500000000000007,
+								0.2616666666666669,
+								0.5316666666666672,
+								0.12166666666666653,
+								0.9733333333333339,
+								0.15333333333333346,
+								0.9883333333333341,
+								0.4783333333333334,
+								0.9933333333333338,
+								0.8566666666666667,
+								0.6966666666666672,
+								0.9033333333333337,
+								0.0466666666666667,
+								0.6316666666666655,
+								0,
+								0.4733333333333335
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 112771216364746,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,110 @@
+{
+	"name": "Store",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 284275885985771
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "store__init();"
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreText",
+					"sid": 621692819705171,
+					"parameters": {
+						"text": "score"
+					}
+				}
+			],
+			"sid": 768383270612418
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 755592417736259,
+					"parameters": {
+						"object": "objectSign"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "store__backButtonClicked();"
+				}
+			],
+			"sid": 629589656264449
+		},
+		{
+			"functionName": "setupSticker",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "objectUID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 412747157703551
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "stickerFamily",
+					"sid": 522351106657715,
+					"parameters": {
+						"unique-id": "objectUID"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "stickerFamily",
+					"sid": 778947041413368,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 825908508190635
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 493609670408528,
+					"parameters": {
+						"object": "woodButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "store__buttonClicked(runtime.objects.woodButton.getFirstPickedInstance());"
+				}
+			],
+			"sid": 685305029824039
+		}
+	],
+	"sid": 645797257415972
+}

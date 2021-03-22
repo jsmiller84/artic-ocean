@@ -1,0 +1,57 @@
+{
+	"name": "buttonSign",
+	"plugin-id": "Sprite",
+	"sid": 470860651232180,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7948893,
+						"collisionPoly": {
+							"points": [
+								0.15234375,
+								0.23283582089552238,
+								0.5,
+								0.056716417910447764,
+								0.892578125,
+								0.16119402985074627,
+								0.919921875,
+								0.5,
+								0.86328125,
+								0.7910447761194029,
+								0.5,
+								0.9970149253731343,
+								0.080078125,
+								0.8746268656716418,
+								0.041015625,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 314879757243271,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -124,7 +124,8 @@
 								"object-name": "objectTouched",
 								"layer": "0",
 								"x": "0",
-								"y": "0"
+								"y": "0",
+								"create-hierarchy": false
 							}
 						}
 					],
@@ -220,7 +221,8 @@
 						"object-to-create": "coin",
 						"layer": "0",
 						"x": "objectFamily.X",
-						"y": "objectFamily.Y"
+						"y": "objectFamily.Y",
+						"create-hierarchy": false
 					}
 				},
 				{

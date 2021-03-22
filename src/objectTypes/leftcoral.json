@@ -2,15 +2,9 @@
 	"name": "leftCoral",
 	"plugin-id": "Sprite",
 	"sid": 932185087873901,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 312508194959355
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

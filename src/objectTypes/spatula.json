@@ -1,0 +1,61 @@
+{
+	"name": "spatula",
+	"plugin-id": "Sprite",
+	"sid": 227810844733336,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9441412,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.05999999999999996,
+								0.07499999999999998,
+								0,
+								0.6416666666666678,
+								0.5800000000000013,
+								0.7300000000000009,
+								0.526666666666667,
+								0.988333333333334,
+								0.8233333333333339,
+								0.9858333333333341,
+								0.903333333333334,
+								0.8699999999999998,
+								0.9800000000000005,
+								0.7016666666666663,
+								0.9850000000000001,
+								0.47500000000000014,
+								0.7383333333333337,
+								0.5633333333333338,
+								0.666666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 246123604330902,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,64 @@
+{
+  "objects": [
+    {
+      "name": "angelfish",
+      "cost": 1,
+      "width": 300,
+      "height": 300
+    },
+    {
+      "name": "clownfish",
+      "cost": 1,
+      "width": 250,
+      "height": 250
+    },
+    {
+      "name": "dolphin",
+      "cost": 1,
+      "width": 450,
+      "height": 450
+    },
+    {
+      "name": "jellyfish",
+      "cost": 1,
+      "width": 300,
+      "height": 300
+    },
+    {
+      "name": "narwhal",
+      "cost": 1,
+      "width": 900,
+      "height": 900
+    },
+    {
+      "name": "octopus",
+      "cost": 1,
+      "width": 600,
+      "height": 600
+    },
+    {
+      "name": "orca",
+      "cost": 1,
+      "width": 700,
+      "height": 700
+    },
+    {
+      "name": "seahorse",
+      "cost": 1,
+      "width": 250,
+      "height": 250
+    },
+    {
+      "name": "seaturtle",
+      "cost": 1,
+      "width": 400,
+      "height": 400
+    },
+    {
+      "name": "tigershark",
+      "cost": 1,
+      "width": 700,
+      "height": 700
+    }
+  ]
+}

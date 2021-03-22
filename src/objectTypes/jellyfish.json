@@ -1,0 +1,65 @@
+{
+	"name": "jellyfish",
+	"plugin-id": "Sprite",
+	"sid": 775119635838934,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8051764,
+						"collisionPoly": {
+							"points": [
+								0.06166666666666672,
+								0.12499999999999997,
+								0.20833333333333345,
+								0.008333333333333333,
+								0.3800000000000006,
+								0,
+								0.5150000000000001,
+								0.06500000000000013,
+								0.5833333333333331,
+								0.2316666666666666,
+								0.7983333333333333,
+								0.455,
+								0.9474999999999999,
+								0.7191666666666671,
+								0.8566666666666669,
+								0.8883333333333331,
+								0.8008333333333331,
+								0.9916666666666666,
+								0.5133333333333336,
+								1,
+								0.3366666666666664,
+								0.8116666666666676,
+								0.07083333333333315,
+								0.32666666666666755
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 967800611258088,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

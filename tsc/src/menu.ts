@@ -1,7 +1,6 @@
 import { runtime, globalThis } from "./global-object";
 import { Main } from "./main";
 
-
 export class Menu {
   private main: Main;
   // Map from sound placement to Construct 3 UID

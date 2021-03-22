@@ -16,6 +16,7 @@ export class Main {
   private coinList;
   private intervalID;
   private coinsGenerated: number;
+  private stickers;
 
   constructor() {
 
@@ -36,6 +37,8 @@ export class Main {
     this.coinsGenerated = 0;
 
     this.loadedSounds = [];
+
+    this.stickers = [];
 
     this.setupConstructCallbacks();
     runtime().addEventListener("beforeprojectstart", () => this.onBeforeProjectStart());
@@ -82,6 +85,10 @@ export class Main {
     await this.setupScene();
   }
 
+  addSticker(sticker) {
+    this.stickers.push(sticker);
+  }
+
   initializeSelectedObjects() {
     this.loadedSounds.forEach((sound) => {
       if (sound.sound in this.mainObjectMap) {
@@ -118,7 +125,7 @@ export class Main {
       for (let ndx = 0; ndx < this.initialBubblePositions.length && ndx < objectListLength; ++ndx) {
         const x = this.initialBubblePositions[ndx][0];
         const y = this.initialBubblePositions[ndx][1];
-        const bubble = await runtime().objects.Bubble.createInstance(0, x, y);
+        const bubble = await runtime().objects.Bubble.createInstance(1, x, y);
 
         //bubbleInstance.behaviors.Physics.set
         bubble.behaviors.Physics.isEnabled = false;
@@ -129,7 +136,7 @@ export class Main {
         const selectedObject = this.objectsList.splice(Math.floor(Math.random() * this.objectsList.length), 1)[0];
         bubble.instVars.childObject = selectedObject;
 
-        const objectInstance = await runtime().objects[selectedObject].createInstance(0, x, y);
+        const objectInstance = await runtime().objects[selectedObject].createInstance(1, x, y);
         objectInstance.width = 300;
         objectInstance.height = 300;
         objectInstance.instVars.name = selectedObject;
@@ -147,8 +154,10 @@ export class Main {
           await runtime().callFunction("attachObject", this.createdObjectList[ndx].uid, bubble.uid);
         }
       }
-      if (this.objectsList.length > 0) {
-        const bubble = await runtime().objects.Bubble.createInstance(0, -300, 500);
+      if (this.objectsList.length > 0 && this.stickers.length === 0) {
+        const bubble = await runtime().objects.Bubble.createInstance(1, 500, 500);
+        //await runtime().callFunction("setupBubblePhysics", bubble.uid);
+
         bubble.width = 400;
         bubble.height = 400;
         this.bubbleList.push(bubble);
@@ -157,7 +166,7 @@ export class Main {
 
         bubble.instVars.childObject = selectedObject;
 
-        const objectInstance = await runtime().objects[selectedObject].createInstance(0, -300, 500);
+        const objectInstance = await runtime().objects[selectedObject].createInstance(1, 500, 500);
         objectInstance.width = 300;
         objectInstance.height = 300;
         objectInstance.instVars.name = selectedObject;
@@ -165,11 +174,22 @@ export class Main {
         this.createdObjectList.push(objectInstance);
         await runtime().callFunction("setupBubblePhysics", bubble.uid);
         await runtime().callFunction("attachObject", objectInstance.uid, bubble.uid);
-
-        this.newBubble = bubble;
       }
     }
     await runtime().callFunction("initCrabPosition");
+
+    if(this.stickers.length) {
+      this.stickers.forEach(async sticker => {
+        if(sticker) {
+          let obj = await runtime().objects[sticker.name].createInstance(0, 500, 500);
+          obj.width = sticker.width;
+          obj.height = sticker.height;
+          console.log(obj);
+        }
+      });
+      this.stickers = [];
+    }
+
   }
 
 
@@ -179,7 +199,7 @@ export class Main {
 
       const childObject = bubble.instVars.childObject;
 
-      const bubblePopAnimation = await runtime().objects.bubblepopspritesheet.createInstance(0, 0, 0);
+      const bubblePopAnimation = await runtime().objects.bubblepopspritesheet.createInstance(1, 0, -300);
       await runtime().callFunction("popBubble", bubble.uid);
       await runtime().callFunction("dropObject", childObject);
     } else {
@@ -272,12 +292,12 @@ export class Main {
   }
 
   tick() {
-    if (this.newBubble !== null && this.newBubble.x < 200) {
+    /*if (this.newBubble && this.newBubble.x < 200) {
       this.newBubble.x += 1;
     }
-    else if (this.newBubble !== null) {
+    else if (this.newBubble) {
       runtime().callFunction("setupBubblePhysics", this.newBubble.uid);
       this.newBubble = null;
-    }
+    }*/
   }
 }

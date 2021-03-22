@@ -1,0 +1,61 @@
+{
+	"name": "leash",
+	"plugin-id": "Sprite",
+	"sid": 162225882477645,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 600,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5476932,
+						"collisionPoly": {
+							"points": [
+								0.02500000000000005,
+								0.07000000000000005,
+								0.538333333333334,
+								0.155,
+								0.7000000000000003,
+								0.4766666666666667,
+								0.8666666666666659,
+								0.34999999999999987,
+								0.9266666666666663,
+								0.38666666666666627,
+								1,
+								0.5424999999999998,
+								0.886666666666667,
+								0.9600000000000005,
+								0.3175000000000003,
+								0.9349999999999993,
+								0.3366666666666668,
+								0.6033333333333328,
+								0,
+								0.16166666666666685
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 689701614195966,
+				"name": "static",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

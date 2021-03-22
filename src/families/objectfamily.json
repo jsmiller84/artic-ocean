@@ -64,8 +64,6 @@
 		"stork",
 		"stool",
 		"stop",
-		"shout",
-		"shamrock",
 		"candy",
 		"cake",
 		"car",
@@ -160,6 +158,21 @@
 		"tire",
 		"tired",
 		"vampire",
-		"wire"
+		"wire",
+		"space",
+		"spatula",
+		"spill",
+		"spin",
+		"spoon",
+		"spot",
+		"spout",
+		"blush",
+		"brush",
+		"bush",
+		"dish",
+		"leash",
+		"radish",
+		"splash",
+		"trash"
 	]
 }
